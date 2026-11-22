@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{TITLE}</title>
+<meta name="description" content="{DESC}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.65}
+a{color:#4a9e32;text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:#1F2937;color:#fff;position:sticky;top:0;z-index:10}
+.topbar-in{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:800;color:#fff}.logo span{color:#6DBE45}
+.nav{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}.nav a{color:#d1d5db;font-size:14px;font-weight:600}.nav a:hover{color:#6DBE45}
+.container{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+.hero{background:#f4faf1;border:1px solid #d9eccb;border-radius:14px;padding:22px;margin:18px 0}
+.hero h1{margin:0 0 8px;font-size:28px;line-height:1.25}.hero p{margin:6px 0;color:#374151}
+.tool-card{background:#fff;border:2px solid #6DBE45;border-radius:14px;padding:20px;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.tool-card h2{margin-top:0;color:#1F2937}.tool-card h2 .tag{background:#6DBE45;color:#fff;font-size:12px;padding:3px 8px;border-radius:20px;vertical-align:middle;margin-left:6px}
+.btn{display:inline-block;background:#6DBE45;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer}
+.btn:hover{background:#57a836}.btn.ghost{background:#fff;color:#1F2937;border:2px solid #1F2937}
+input,select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px;margin:6px 0 12px}
+label{font-weight:600;font-size:14px}
+.opt{display:block;width:100%;text-align:left;background:#f9fafb;border:1px solid #d1d5db;border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;font-size:15px}
+.opt:hover{border-color:#6DBE45}.opt.correct{background:#dcfce7;border-color:#16a34a}.opt.wrong{background:#fee2e2;border-color:#dc2626}.opt:disabled{cursor:default;opacity:.9}
+.quiz-meta{font-size:14px;color:#6b7280;margin:6px 0}
+.result{background:#f4faf1;border:1px solid #6DBE45;border-radius:10px;padding:16px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:18px 0}
+.card{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
+.card img{width:100%;height:150px;object-fit:cover;display:block}
+.card-body{padding:14px}.card-body h3{margin:0 0 6px;font-size:16px;line-height:1.35}.card-body h3 a{color:#1F2937}.card-body p{margin:0;font-size:14px;color:#6b7280}
+.section-title{font-size:22px;margin:28px 0 6px;border-bottom:3px solid #6DBE45;padding-bottom:6px;display:inline-block}
+.hero-img{width:100%;max-height:380px;object-fit:cover;border-radius:12px;margin:12px 0}
+article h2{margin-top:26px}article h3{margin-top:20px}
+.faq{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:16px;margin:22px 0}
+.faq h2{margin-top:0}.faq details{margin:10px 0}.faq summary{font-weight:700;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:12px 16px;margin:18px 0;font-size:14px}
+footer{background:#1F2937;color:#d1d5db;margin-top:30px}
+.foot-in{max-width:980px;margin:0 auto;padding:26px 16px;font-size:14px}
+.foot-in a{color:#9ed67f}.foot-in nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0}th,td{border:1px solid #d1d5db;padding:8px 10px;text-align:left;font-size:14px}th{background:#f4faf1}
+.code-row{border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;margin:8px 0}.code-row b{color:#1F2937}.code-row code{background:#f4faf1;color:#166534;padding:2px 6px;border-radius:5px;font-size:15px}
+.daily-q{margin:16px 0;padding-top:12px;border-top:1px dashed #d1d5db}.daily-q:first-child{border-top:none;padding-top:0}.daily-q h3{margin:0 0 4px;font-size:16px}
+@media(max-width:640px){.hero h1{font-size:22px}.topbar-in{gap:8px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a class="logo" href="/index.html">Zong<span>Quiz</span>Today</a>
+<nav class="nav"><a href="/index.html">Home</a><a href="/index.html#quiz">Quiz</a><a href="/index.html#codes">Codes</a><a href="/index.html#guides">Guides</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+</div></header>
+<div class="container">
+
+<p><a href="/index.html">&larr; Back to home</a></p>
+<h1>Zong Quiz Rewards Explained</h1>
+<img class="hero-img" src="/images/zong-quiz-rewards-explained.jpg" alt="Zong Quiz Rewards Explained">
+<article>
+<p>The Zong daily quiz is popular because it offers small rewards for a few minutes of play. But many players are unsure what the rewards actually are, how they are decided, and when they arrive. This guide explains the reward system in plain language, so you know what to expect and what to do if a reward does not show up.</p>
+<h2>What kinds of rewards are there?</h2>
+<p>Quiz rewards are usually digital benefits added to your Zong account. The most common are free mobile data (often a small amount such as 50 MB or 100 MB), free on-net or off-net minutes, free SMS, or a discount on a bundle inside the app. During special events, the app may offer vouchers or entry into a larger prize draw. The exact reward on any given day is shown inside the quiz section of the My Zong app before or after you play.</p>
+<p>Rewards are deliberately modest. They are a daily bonus to thank you for using the app, not a replacement for buying a data bundle. If any website, video or message promises large cash prizes or unlimited free data for answering quiz questions, treat it as a scam — real rewards only ever come through the official app.</p>
+<h2>How is a reward decided?</h2>
+<p>Most quiz rounds work on a simple rule: your score decides your reward. On some days, everyone who finishes the round receives the same small reward. On other days, only players who reach a minimum score qualify, and higher scores may earn a slightly better reward. Some rounds are timed, so answering quickly as well as correctly can matter.</p>
+<p>The rules are shown inside the app for each round, and they can change from day to day. That is why it is worth reading the short instructions on the quiz screen before you start, rather than assuming the rules are the same as yesterday.</p>
+<h2>When do rewards arrive?</h2>
+<p>Rewards are usually added to your account soon after you finish the round, but sometimes there is a delay of a few hours. If your reward is data, you can check it by dialling *102# or by looking at the balance section of the My Zong app. If it is minutes, check your remaining minutes in the app. A short wait is normal, especially when many people are playing at the same time.</p>
+<p>Some rewards come with a short validity — for example, free data that must be used within 24 hours. The validity is normally shown in the reward message or in the app. Use the reward promptly so it does not expire unused.</p>
+<h2>What if a reward is missing?</h2>
+<p>If you finished a round, met the score requirement, and still have no reward after several hours, check a few things first. Confirm that you played the official quiz in the My Zong app, that you were logged in with the correct Zong number, and that you actually met the score shown in the rules. Then check the app's notifications or rewards history for a record of the reward.</p>
+<p>If everything looks right and the reward is still missing, contact Zong customer support by calling 310 from your Zong number. Tell them the date and time you played, your score, and the reward that was promised. Keep a screenshot of the quiz result screen if you can — it makes the complaint much easier to check.</p>
+<h2>Getting the most from quiz rewards</h2>
+<p>Play every day, because rewards are usually offered daily and often cannot be collected later. Read the rules each time, aim for a high score, and use any free data before it expires. Also look at the other reward features in the My Zong app — daily check-ins, spin wheels and special offers — since they often give free data too. Combined, these small daily bonuses can add up to a useful amount of extra data over a month.</p>
+</article>
+<div class="faq"><h2>Frequently asked questions</h2><details><summary>What rewards can I win from the Zong quiz?</summary><p>Usually small benefits like free data, free minutes or SMS. The exact reward is shown inside the My Zong app each day.</p></details><details><summary>How long does a quiz reward take to arrive?</summary><p>Usually soon after you finish, but it can take a few hours. Check your balance in the app or with *102#.</p></details><details><summary>My reward never arrived. What should I do?</summary><p>Wait a few hours, check the app&#x27;s reward history, then call Zong support on 310 with the date, time and your score.</p></details></div>
+<h2>Related guides</h2>
+<ul><li><a href="/guides/zong-daily-quiz-how-it-works.html">How the Zong Daily Quiz Works (My Zong App)</a></li><li><a href="/guides/zong-quiz-answers-where-to-find.html">Where to Find Zong Quiz Answers Today</a></li><li><a href="/guides/my-zong-app-guide.html">My Zong App: Download and Use It for the Quiz</a></li></ul>
+<div class="note"><strong>Note:</strong> This site is unofficial and independent — not affiliated with Zong. Codes, prices, packages and rewards change often; confirm the current details in the official My Zong app or by calling 310.</div>
+
+</div>
+<footer><div class="foot-in">
+<nav><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy Policy</a><a href="/disclaimer.html">Disclaimer</a></nav>
+<p><strong>Zong Quiz Today</strong> — daily quiz answers, mobile codes and guides for Zong users in Pakistan.</p>
+<p>Unofficial &amp; independent — not affiliated with Zong, Zong CMPak Ltd, or any telecom company. Codes, prices, packages and rewards change often; always confirm the current details in the official My Zong app or by calling the Zong helpline 310.</p>
+<p>&copy; 2026 Zong Quiz Today. All rights reserved.</p>
+</div></footer>
+</body>
+</html>

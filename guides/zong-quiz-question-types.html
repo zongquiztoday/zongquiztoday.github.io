@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{TITLE}</title>
+<meta name="description" content="{DESC}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.65}
+a{color:#4a9e32;text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:#1F2937;color:#fff;position:sticky;top:0;z-index:10}
+.topbar-in{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:800;color:#fff}.logo span{color:#6DBE45}
+.nav{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}.nav a{color:#d1d5db;font-size:14px;font-weight:600}.nav a:hover{color:#6DBE45}
+.container{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+.hero{background:#f4faf1;border:1px solid #d9eccb;border-radius:14px;padding:22px;margin:18px 0}
+.hero h1{margin:0 0 8px;font-size:28px;line-height:1.25}.hero p{margin:6px 0;color:#374151}
+.tool-card{background:#fff;border:2px solid #6DBE45;border-radius:14px;padding:20px;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.tool-card h2{margin-top:0;color:#1F2937}.tool-card h2 .tag{background:#6DBE45;color:#fff;font-size:12px;padding:3px 8px;border-radius:20px;vertical-align:middle;margin-left:6px}
+.btn{display:inline-block;background:#6DBE45;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer}
+.btn:hover{background:#57a836}.btn.ghost{background:#fff;color:#1F2937;border:2px solid #1F2937}
+input,select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px;margin:6px 0 12px}
+label{font-weight:600;font-size:14px}
+.opt{display:block;width:100%;text-align:left;background:#f9fafb;border:1px solid #d1d5db;border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;font-size:15px}
+.opt:hover{border-color:#6DBE45}.opt.correct{background:#dcfce7;border-color:#16a34a}.opt.wrong{background:#fee2e2;border-color:#dc2626}.opt:disabled{cursor:default;opacity:.9}
+.quiz-meta{font-size:14px;color:#6b7280;margin:6px 0}
+.result{background:#f4faf1;border:1px solid #6DBE45;border-radius:10px;padding:16px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:18px 0}
+.card{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
+.card img{width:100%;height:150px;object-fit:cover;display:block}
+.card-body{padding:14px}.card-body h3{margin:0 0 6px;font-size:16px;line-height:1.35}.card-body h3 a{color:#1F2937}.card-body p{margin:0;font-size:14px;color:#6b7280}
+.section-title{font-size:22px;margin:28px 0 6px;border-bottom:3px solid #6DBE45;padding-bottom:6px;display:inline-block}
+.hero-img{width:100%;max-height:380px;object-fit:cover;border-radius:12px;margin:12px 0}
+article h2{margin-top:26px}article h3{margin-top:20px}
+.faq{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:16px;margin:22px 0}
+.faq h2{margin-top:0}.faq details{margin:10px 0}.faq summary{font-weight:700;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:12px 16px;margin:18px 0;font-size:14px}
+footer{background:#1F2937;color:#d1d5db;margin-top:30px}
+.foot-in{max-width:980px;margin:0 auto;padding:26px 16px;font-size:14px}
+.foot-in a{color:#9ed67f}.foot-in nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0}th,td{border:1px solid #d1d5db;padding:8px 10px;text-align:left;font-size:14px}th{background:#f4faf1}
+.code-row{border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;margin:8px 0}.code-row b{color:#1F2937}.code-row code{background:#f4faf1;color:#166534;padding:2px 6px;border-radius:5px;font-size:15px}
+.daily-q{margin:16px 0;padding-top:12px;border-top:1px dashed #d1d5db}.daily-q:first-child{border-top:none;padding-top:0}.daily-q h3{margin:0 0 4px;font-size:16px}
+@media(max-width:640px){.hero h1{font-size:22px}.topbar-in{gap:8px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a class="logo" href="/index.html">Zong<span>Quiz</span>Today</a>
+<nav class="nav"><a href="/index.html">Home</a><a href="/index.html#quiz">Quiz</a><a href="/index.html#codes">Codes</a><a href="/index.html#guides">Guides</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+</div></header>
+<div class="container">
+
+<p><a href="/index.html">&larr; Back to home</a></p>
+<h1>Zong Quiz Question Types and Preparation</h1>
+<img class="hero-img" src="/images/zong-quiz-question-types.jpg" alt="Zong Quiz Question Types and Preparation">
+<article>
+<p>The Zong daily quiz does not ask the same kind of question every time. Some questions test facts about Pakistan, others test science, sports or everyday knowledge. Knowing the types of questions in advance helps you prepare in the right way, instead of revising blindly. This guide breaks down the main question types and how to get ready for each.</p>
+<h2>Pakistan general knowledge</h2>
+<p>This is the most common category. Questions cover the capital, provinces, major cities, rivers, mountains, national symbols and famous places. Examples: the capital of Pakistan, the largest province by area, the longest river, or the national animal. These are school-level facts, and they are worth revising first because they appear so often.</p>
+<p>Make a short list of key facts — capitals, rivers, mountains, national symbols, important dates — and revise it once a week. Our practice quiz on the homepage covers many of these facts.</p>
+<h2>History and famous personalities</h2>
+<p>History questions often ask about the Pakistan Movement, Independence Day, the founder of Pakistan, and important historical events and dates. Questions about famous personalities may cover poets, scientists, sports stars and leaders. Knowing the main names and dates — 14 August 1947, Quaid-e-Azam Muhammad Ali Jinnah, Allama Iqbal — covers a large share of these questions.</p>
+<p>When revising history, focus on the most famous events and people first. Quiz writers usually choose well-known facts rather than obscure details, so a solid grasp of the basics goes a long way.</p>
+<h2>Science and everyday knowledge</h2>
+<p>Science questions are usually simple and practical: the boiling point of water, the planet closest to the sun, the chemical symbol for water, or how many legs an insect has. Everyday knowledge questions cover topics like the number of days in a leap year, the colours of the rainbow, or basic health and food facts.</p>
+<p>These questions reward general awareness rather than deep study. Reading science facts for children or general-knowledge books is a good way to prepare, and many of the answers are things you already know but have not thought about recently.</p>
+<h2>Sports and current affairs</h2>
+<p>Sports questions often focus on cricket, Pakistan's most popular sport: famous players, World Cup history, and basic rules. Football and hockey appear too. Current affairs questions cover recent news — new government announcements, major sports results, and international events. Reading the news for a few minutes a day is the best preparation for this category, because these questions change with the headlines.</p>
+<h2>Islamic studies and culture</h2>
+<p>Questions about Islamic studies may ask about the number of Surahs in the Quran, the months of the Islamic calendar, or basic facts about Islamic history. Culture questions may cover Pakistani food, languages, festivals and traditions. These are usually straightforward for players who know the basics.</p>
+<h2>How to prepare for all of them</h2>
+<p>Do not try to memorise everything at once. Instead, revise one category per day: Pakistan facts on Monday, history on Tuesday, science on Wednesday, and so on. Use our practice quiz regularly, read the news, and keep a small notebook of facts you get wrong. If you miss a question in the practice quiz, read the correct answer and think about why it is right, because the same fact often appears again in a different form. After a few weeks, you will notice the same topics coming up again and again — and your scores will climb.</p>
+</article>
+<div class="faq"><h2>Frequently asked questions</h2><details><summary>What topics appear in the Zong quiz?</summary><p>Mostly Pakistan general knowledge, history, science, sports, current affairs, Islamic studies and culture.</p></details><details><summary>How should I prepare for the quiz?</summary><p>Revise one topic per day, read the news, and practise with multiple-choice quizzes like the one on our homepage.</p></details><details><summary>Are the questions very difficult?</summary><p>No — most are school-level general knowledge. The challenge is answering quickly and accurately.</p></details></div>
+<h2>Related guides</h2>
+<ul><li><a href="/guides/zong-daily-quiz-how-it-works.html">How the Zong Daily Quiz Works (My Zong App)</a></li><li><a href="/guides/zong-quiz-answers-where-to-find.html">Where to Find Zong Quiz Answers Today</a></li><li><a href="/guides/zong-quiz-rewards-explained.html">Zong Quiz Rewards Explained</a></li></ul>
+<div class="note"><strong>Note:</strong> This site is unofficial and independent — not affiliated with Zong. Codes, prices, packages and rewards change often; confirm the current details in the official My Zong app or by calling 310.</div>
+
+</div>
+<footer><div class="foot-in">
+<nav><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy Policy</a><a href="/disclaimer.html">Disclaimer</a></nav>
+<p><strong>Zong Quiz Today</strong> — daily quiz answers, mobile codes and guides for Zong users in Pakistan.</p>
+<p>Unofficial &amp; independent — not affiliated with Zong, Zong CMPak Ltd, or any telecom company. Codes, prices, packages and rewards change often; always confirm the current details in the official My Zong app or by calling the Zong helpline 310.</p>
+<p>&copy; 2026 Zong Quiz Today. All rights reserved.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{TITLE}</title>
+<meta name="description" content="{DESC}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.65}
+a{color:#4a9e32;text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:#1F2937;color:#fff;position:sticky;top:0;z-index:10}
+.topbar-in{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:800;color:#fff}.logo span{color:#6DBE45}
+.nav{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}.nav a{color:#d1d5db;font-size:14px;font-weight:600}.nav a:hover{color:#6DBE45}
+.container{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+.hero{background:#f4faf1;border:1px solid #d9eccb;border-radius:14px;padding:22px;margin:18px 0}
+.hero h1{margin:0 0 8px;font-size:28px;line-height:1.25}.hero p{margin:6px 0;color:#374151}
+.tool-card{background:#fff;border:2px solid #6DBE45;border-radius:14px;padding:20px;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.tool-card h2{margin-top:0;color:#1F2937}.tool-card h2 .tag{background:#6DBE45;color:#fff;font-size:12px;padding:3px 8px;border-radius:20px;vertical-align:middle;margin-left:6px}
+.btn{display:inline-block;background:#6DBE45;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer}
+.btn:hover{background:#57a836}.btn.ghost{background:#fff;color:#1F2937;border:2px solid #1F2937}
+input,select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px;margin:6px 0 12px}
+label{font-weight:600;font-size:14px}
+.opt{display:block;width:100%;text-align:left;background:#f9fafb;border:1px solid #d1d5db;border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;font-size:15px}
+.opt:hover{border-color:#6DBE45}.opt.correct{background:#dcfce7;border-color:#16a34a}.opt.wrong{background:#fee2e2;border-color:#dc2626}.opt:disabled{cursor:default;opacity:.9}
+.quiz-meta{font-size:14px;color:#6b7280;margin:6px 0}
+.result{background:#f4faf1;border:1px solid #6DBE45;border-radius:10px;padding:16px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:18px 0}
+.card{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
+.card img{width:100%;height:150px;object-fit:cover;display:block}
+.card-body{padding:14px}.card-body h3{margin:0 0 6px;font-size:16px;line-height:1.35}.card-body h3 a{color:#1F2937}.card-body p{margin:0;font-size:14px;color:#6b7280}
+.section-title{font-size:22px;margin:28px 0 6px;border-bottom:3px solid #6DBE45;padding-bottom:6px;display:inline-block}
+.hero-img{width:100%;max-height:380px;object-fit:cover;border-radius:12px;margin:12px 0}
+article h2{margin-top:26px}article h3{margin-top:20px}
+.faq{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:16px;margin:22px 0}
+.faq h2{margin-top:0}.faq details{margin:10px 0}.faq summary{font-weight:700;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:12px 16px;margin:18px 0;font-size:14px}
+footer{background:#1F2937;color:#d1d5db;margin-top:30px}
+.foot-in{max-width:980px;margin:0 auto;padding:26px 16px;font-size:14px}
+.foot-in a{color:#9ed67f}.foot-in nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0}th,td{border:1px solid #d1d5db;padding:8px 10px;text-align:left;font-size:14px}th{background:#f4faf1}
+.code-row{border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;margin:8px 0}.code-row b{color:#1F2937}.code-row code{background:#f4faf1;color:#166534;padding:2px 6px;border-radius:5px;font-size:15px}
+.daily-q{margin:16px 0;padding-top:12px;border-top:1px dashed #d1d5db}.daily-q:first-child{border-top:none;padding-top:0}.daily-q h3{margin:0 0 4px;font-size:16px}
+@media(max-width:640px){.hero h1{font-size:22px}.topbar-in{gap:8px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a class="logo" href="/index.html">Zong<span>Quiz</span>Today</a>
+<nav class="nav"><a href="/index.html">Home</a><a href="/index.html#quiz">Quiz</a><a href="/index.html#codes">Codes</a><a href="/index.html#guides">Guides</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+</div></header>
+<div class="container">
+
+<p><a href="/index.html">&larr; Back to home</a></p>
+<h1>Zong Call Packages Guide</h1>
+<img class="hero-img" src="/images/zong-call-packages.jpg" alt="Zong Call Packages Guide">
+<article>
+<p>Even in a world of messaging apps, call packages still matter. Many Zong users call family, friends and colleagues every day, and the right call package can cut the cost sharply compared with paying per minute. This guide explains how Zong call packages work, the difference between on-net and off-net minutes, and how to choose a package that fits your calling habits.</p>
+<h2>On-net and off-net minutes</h2>
+<p>The first thing to understand is the difference between on-net and off-net calls. On-net calls are calls to other Zong numbers, and they are usually much cheaper — many bundles include a large number of on-net minutes. Off-net calls are calls to other networks such as Jazz, Telenor or Ufone, and they usually cost more per minute, with fewer minutes included in a bundle.</p>
+<p>Before choosing a package, think about who you call most. If most of your contacts are on Zong, a bundle with generous on-net minutes is ideal. If you call all networks equally, look for a bundle that includes a fair number of off-net minutes too, or one that advertises minutes for all networks.</p>
+<h2>Daily, weekly and monthly call packages</h2>
+<p>Daily call packages give you minutes for 24 hours. They are useful if you need to make many calls on one particular day, for example when arranging something important. Weekly packages last seven days and suit people who call regularly but not every day. Monthly packages last 30 days and are the best choice for people who call every day, because the cost per minute is usually the lowest.</p>
+<p>Many modern bundles combine calls with data and SMS. These all-in-one bundles are often better value than buying calls, data and SMS separately, so compare the combined price before buying a calls-only package.</p>
+<h2>How to activate a call package</h2>
+<p>Open the My Zong app, log in with your Zong number, and go to the bundles or call packages section. The app shows each package's minutes, validity and price. Choose the one that matches your needs and confirm. You will get a confirmation message when the package is active.</p>
+<p>Always confirm the current price in the My Zong app before subscribing, because package prices and minute allowances change from time to time. If a package does not appear in the app, it may have been withdrawn or may not be available on your account type.</p>
+<h2>Checking your remaining minutes</h2>
+<p>To see how many free minutes you have left, check the usage or balance section of the My Zong app. You can also dial *224# to check your remaining free minutes on eligible bundles. Checking regularly helps you avoid running out mid-call and lets you plan your next recharge.</p>
+<p>If your minutes run out before the package expires, you can either buy another bundle or wait for the next one. Repeatedly topping up with small daily bundles usually costs more than switching to a larger monthly package, so look at your monthly calling pattern before deciding.</p>
+<h2>Saving money on calls</h2>
+<p>Use internet calling apps over Wi-Fi for long conversations when the other person also has the app. Keep your calls short when you are on a per-minute rate, and save longer calls for when your bundle minutes are active. Also check the app's offers section regularly — Zong often runs promotions that add extra minutes to a bundle for a limited time.</p>
+</article>
+<div class="faq"><h2>Frequently asked questions</h2><details><summary>What is the difference between on-net and off-net minutes?</summary><p>On-net minutes are for calls to other Zong numbers; off-net minutes are for calls to other networks, and they usually cost more.</p></details><details><summary>How do I check my remaining Zong minutes?</summary><p>Check the My Zong app, or dial *224# for your remaining free minutes on eligible bundles.</p></details><details><summary>Which call package is best for daily callers?</summary><p>A monthly package usually gives the lowest cost per minute. Confirm the current price in the My Zong app.</p></details></div>
+<h2>Related guides</h2>
+<ul><li><a href="/guides/zong-daily-quiz-how-it-works.html">How the Zong Daily Quiz Works (My Zong App)</a></li><li><a href="/guides/zong-quiz-answers-where-to-find.html">Where to Find Zong Quiz Answers Today</a></li><li><a href="/guides/zong-quiz-rewards-explained.html">Zong Quiz Rewards Explained</a></li></ul>
+<div class="note"><strong>Note:</strong> This site is unofficial and independent — not affiliated with Zong. Codes, prices, packages and rewards change often; confirm the current details in the official My Zong app or by calling 310.</div>
+
+</div>
+<footer><div class="foot-in">
+<nav><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy Policy</a><a href="/disclaimer.html">Disclaimer</a></nav>
+<p><strong>Zong Quiz Today</strong> — daily quiz answers, mobile codes and guides for Zong users in Pakistan.</p>
+<p>Unofficial &amp; independent — not affiliated with Zong, Zong CMPak Ltd, or any telecom company. Codes, prices, packages and rewards change often; always confirm the current details in the official My Zong app or by calling the Zong helpline 310.</p>
+<p>&copy; 2026 Zong Quiz Today. All rights reserved.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{TITLE}</title>
+<meta name="description" content="{DESC}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.65}
+a{color:#4a9e32;text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:#1F2937;color:#fff;position:sticky;top:0;z-index:10}
+.topbar-in{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:800;color:#fff}.logo span{color:#6DBE45}
+.nav{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}.nav a{color:#d1d5db;font-size:14px;font-weight:600}.nav a:hover{color:#6DBE45}
+.container{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+.hero{background:#f4faf1;border:1px solid #d9eccb;border-radius:14px;padding:22px;margin:18px 0}
+.hero h1{margin:0 0 8px;font-size:28px;line-height:1.25}.hero p{margin:6px 0;color:#374151}
+.tool-card{background:#fff;border:2px solid #6DBE45;border-radius:14px;padding:20px;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.tool-card h2{margin-top:0;color:#1F2937}.tool-card h2 .tag{background:#6DBE45;color:#fff;font-size:12px;padding:3px 8px;border-radius:20px;vertical-align:middle;margin-left:6px}
+.btn{display:inline-block;background:#6DBE45;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer}
+.btn:hover{background:#57a836}.btn.ghost{background:#fff;color:#1F2937;border:2px solid #1F2937}
+input,select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px;margin:6px 0 12px}
+label{font-weight:600;font-size:14px}
+.opt{display:block;width:100%;text-align:left;background:#f9fafb;border:1px solid #d1d5db;border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;font-size:15px}
+.opt:hover{border-color:#6DBE45}.opt.correct{background:#dcfce7;border-color:#16a34a}.opt.wrong{background:#fee2e2;border-color:#dc2626}.opt:disabled{cursor:default;opacity:.9}
+.quiz-meta{font-size:14px;color:#6b7280;margin:6px 0}
+.result{background:#f4faf1;border:1px solid #6DBE45;border-radius:10px;padding:16px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:18px 0}
+.card{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
+.card img{width:100%;height:150px;object-fit:cover;display:block}
+.card-body{padding:14px}.card-body h3{margin:0 0 6px;font-size:16px;line-height:1.35}.card-body h3 a{color:#1F2937}.card-body p{margin:0;font-size:14px;color:#6b7280}
+.section-title{font-size:22px;margin:28px 0 6px;border-bottom:3px solid #6DBE45;padding-bottom:6px;display:inline-block}
+.hero-img{width:100%;max-height:380px;object-fit:cover;border-radius:12px;margin:12px 0}
+article h2{margin-top:26px}article h3{margin-top:20px}
+.faq{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:16px;margin:22px 0}
+.faq h2{margin-top:0}.faq details{margin:10px 0}.faq summary{font-weight:700;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:12px 16px;margin:18px 0;font-size:14px}
+footer{background:#1F2937;color:#d1d5db;margin-top:30px}
+.foot-in{max-width:980px;margin:0 auto;padding:26px 16px;font-size:14px}
+.foot-in a{color:#9ed67f}.foot-in nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0}th,td{border:1px solid #d1d5db;padding:8px 10px;text-align:left;font-size:14px}th{background:#f4faf1}
+.code-row{border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;margin:8px 0}.code-row b{color:#1F2937}.code-row code{background:#f4faf1;color:#166534;padding:2px 6px;border-radius:5px;font-size:15px}
+.daily-q{margin:16px 0;padding-top:12px;border-top:1px dashed #d1d5db}.daily-q:first-child{border-top:none;padding-top:0}.daily-q h3{margin:0 0 4px;font-size:16px}
+@media(max-width:640px){.hero h1{font-size:22px}.topbar-in{gap:8px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a class="logo" href="/index.html">Zong<span>Quiz</span>Today</a>
+<nav class="nav"><a href="/index.html">Home</a><a href="/index.html#quiz">Quiz</a><a href="/index.html#codes">Codes</a><a href="/index.html#guides">Guides</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+</div></header>
+<div class="container">
+
+<p><a href="/index.html">&larr; Back to home</a></p>
+<h1>Zong Quiz Not Loading? How to Fix It</h1>
+<img class="hero-img" src="/images/zong-quiz-not-loading-fix.jpg" alt="Zong Quiz Not Loading? How to Fix It">
+<article>
+<p>You open the My Zong app, tap the quiz — and nothing happens. The quiz screen stays blank, keeps loading, or the app closes. This is a common problem, and in most cases it has a simple fix. This guide walks you through the checks in order, from the quickest to the most thorough.</p>
+<h2>First: check your internet</h2>
+<p>The quiz needs an internet connection to load. Check that your phone shows a 4G signal or is connected to Wi-Fi. Try opening a website or another app to see whether the internet is working at all. If your data is finished, the quiz cannot load — check your remaining data with *102# or in the My Zong app.</p>
+<p>If you are on mobile data, try switching to Wi-Fi, or move to a place with a stronger signal. A weak signal is one of the most common causes of a quiz that loads halfway and then stops.</p>
+<h2>Update the app</h2>
+<p>An old version of the My Zong app may not show the newest quiz at all. Open the Google Play Store or Apple App Store, search for "My Zong", and check whether an update is available. Install it, then close the app fully and open it again. Updates often fix loading problems and add new features, so keeping the app updated is the single most useful habit.</p>
+<h2>Restart and clear the cache</h2>
+<p>If the app is updated and the quiz still will not load, close the app completely — not just minimise it — and open it again. If that does not help, restart your phone. A restart clears temporary glitches that can stop an app from loading properly.</p>
+<p>On Android, you can also clear the app's cache: go to Settings, then Apps, find My Zong, tap Storage, and tap Clear Cache. Do not tap Clear Data unless you are ready to log in again, because it removes your saved login. On iPhone, the equivalent step is to delete the app and reinstall it from the App Store.</p>
+<h2>Check whether the quiz is available</h2>
+<p>Sometimes the quiz itself is the problem, not your phone. The quiz may be paused, the promotion may have ended, or it may not be available on your account at that time. If the rest of the app works fine — your balance and bundles load normally — but the quiz section is missing or blank, the offer may simply not be running.</p>
+<p>Wait a day and check again. Quiz promotions change regularly, and a missing quiz today may return tomorrow. You can also ask Zong support on 310 whether the quiz is currently available on your number.</p>
+<h2>Free up space and check permissions</h2>
+<p>A phone that is almost full of storage can make apps misbehave. Check your free storage and delete old photos, videos or apps you do not use. Also check that the My Zong app has the permissions it needs — in your phone settings, make sure it is allowed to use mobile data and to send notifications.</p>
+<p>If you use a VPN or a data-saving app, try turning it off and loading the quiz again. These tools can interfere with how the app connects to Zong's servers.</p>
+<h2>When to contact support</h2>
+<p>If you have tried everything above — strong internet, updated app, restarted phone, cleared cache — and the quiz still will not load after a day or two, call Zong support on 310. Explain what you tried and what happens when you tap the quiz. The agent can check whether the quiz is active on your account and whether there is a known problem with the app.</p>
+</article>
+<div class="faq"><h2>Frequently asked questions</h2><details><summary>Why is the Zong quiz not loading?</summary><p>Usually a weak connection, an outdated app, or the quiz promotion not running. Check your internet and update the app first.</p></details><details><summary>Should I clear the app cache?</summary><p>On Android, clearing the cache often fixes loading problems. Do not tap Clear Data unless you are ready to log in again.</p></details><details><summary>The quiz is missing from my app. What should I do?</summary><p>Wait a day — the promotion may have paused — or call 310 to ask whether the quiz is available on your number.</p></details></div>
+<h2>Related guides</h2>
+<ul><li><a href="/guides/zong-daily-quiz-how-it-works.html">How the Zong Daily Quiz Works (My Zong App)</a></li><li><a href="/guides/zong-quiz-answers-where-to-find.html">Where to Find Zong Quiz Answers Today</a></li><li><a href="/guides/zong-quiz-rewards-explained.html">Zong Quiz Rewards Explained</a></li></ul>
+<div class="note"><strong>Note:</strong> This site is unofficial and independent — not affiliated with Zong. Codes, prices, packages and rewards change often; confirm the current details in the official My Zong app or by calling 310.</div>
+
+</div>
+<footer><div class="foot-in">
+<nav><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy Policy</a><a href="/disclaimer.html">Disclaimer</a></nav>
+<p><strong>Zong Quiz Today</strong> — daily quiz answers, mobile codes and guides for Zong users in Pakistan.</p>
+<p>Unofficial &amp; independent — not affiliated with Zong, Zong CMPak Ltd, or any telecom company. Codes, prices, packages and rewards change often; always confirm the current details in the official My Zong app or by calling the Zong helpline 310.</p>
+<p>&copy; 2026 Zong Quiz Today. All rights reserved.</p>
+</div></footer>
+</body>
+</html>

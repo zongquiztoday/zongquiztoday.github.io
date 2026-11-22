@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{TITLE}</title>
+<meta name="description" content="{DESC}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.65}
+a{color:#4a9e32;text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:#1F2937;color:#fff;position:sticky;top:0;z-index:10}
+.topbar-in{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:800;color:#fff}.logo span{color:#6DBE45}
+.nav{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}.nav a{color:#d1d5db;font-size:14px;font-weight:600}.nav a:hover{color:#6DBE45}
+.container{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+.hero{background:#f4faf1;border:1px solid #d9eccb;border-radius:14px;padding:22px;margin:18px 0}
+.hero h1{margin:0 0 8px;font-size:28px;line-height:1.25}.hero p{margin:6px 0;color:#374151}
+.tool-card{background:#fff;border:2px solid #6DBE45;border-radius:14px;padding:20px;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.tool-card h2{margin-top:0;color:#1F2937}.tool-card h2 .tag{background:#6DBE45;color:#fff;font-size:12px;padding:3px 8px;border-radius:20px;vertical-align:middle;margin-left:6px}
+.btn{display:inline-block;background:#6DBE45;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer}
+.btn:hover{background:#57a836}.btn.ghost{background:#fff;color:#1F2937;border:2px solid #1F2937}
+input,select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px;margin:6px 0 12px}
+label{font-weight:600;font-size:14px}
+.opt{display:block;width:100%;text-align:left;background:#f9fafb;border:1px solid #d1d5db;border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;font-size:15px}
+.opt:hover{border-color:#6DBE45}.opt.correct{background:#dcfce7;border-color:#16a34a}.opt.wrong{background:#fee2e2;border-color:#dc2626}.opt:disabled{cursor:default;opacity:.9}
+.quiz-meta{font-size:14px;color:#6b7280;margin:6px 0}
+.result{background:#f4faf1;border:1px solid #6DBE45;border-radius:10px;padding:16px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:18px 0}
+.card{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
+.card img{width:100%;height:150px;object-fit:cover;display:block}
+.card-body{padding:14px}.card-body h3{margin:0 0 6px;font-size:16px;line-height:1.35}.card-body h3 a{color:#1F2937}.card-body p{margin:0;font-size:14px;color:#6b7280}
+.section-title{font-size:22px;margin:28px 0 6px;border-bottom:3px solid #6DBE45;padding-bottom:6px;display:inline-block}
+.hero-img{width:100%;max-height:380px;object-fit:cover;border-radius:12px;margin:12px 0}
+article h2{margin-top:26px}article h3{margin-top:20px}
+.faq{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:16px;margin:22px 0}
+.faq h2{margin-top:0}.faq details{margin:10px 0}.faq summary{font-weight:700;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:12px 16px;margin:18px 0;font-size:14px}
+footer{background:#1F2937;color:#d1d5db;margin-top:30px}
+.foot-in{max-width:980px;margin:0 auto;padding:26px 16px;font-size:14px}
+.foot-in a{color:#9ed67f}.foot-in nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0}th,td{border:1px solid #d1d5db;padding:8px 10px;text-align:left;font-size:14px}th{background:#f4faf1}
+.code-row{border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;margin:8px 0}.code-row b{color:#1F2937}.code-row code{background:#f4faf1;color:#166534;padding:2px 6px;border-radius:5px;font-size:15px}
+.daily-q{margin:16px 0;padding-top:12px;border-top:1px dashed #d1d5db}.daily-q:first-child{border-top:none;padding-top:0}.daily-q h3{margin:0 0 4px;font-size:16px}
+@media(max-width:640px){.hero h1{font-size:22px}.topbar-in{gap:8px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a class="logo" href="/index.html">Zong<span>Quiz</span>Today</a>
+<nav class="nav"><a href="/index.html">Home</a><a href="/index.html#quiz">Quiz</a><a href="/index.html#codes">Codes</a><a href="/index.html#guides">Guides</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+</div></header>
+<div class="container">
+
+<p><a href="/index.html">&larr; Back to home</a></p>
+<h1>My Zong App: Download and Use It for the Quiz</h1>
+<img class="hero-img" src="/images/my-zong-app-guide.jpg" alt="My Zong App: Download and Use It for the Quiz">
+<article>
+<p>The My Zong app is the official self-service app for Zong users in Pakistan. It lets you check your balance, buy bundles, view your usage and play the daily quiz — all from your phone. If you want to play the quiz or claim daily rewards, this app is the place to do it. This guide walks you through downloading it, setting it up and finding your way around.</p>
+<h2>Downloading the app</h2>
+<p>On an Android phone, open the Google Play Store, search for "My Zong" and install the app published by Zong. On an iPhone, open the Apple App Store and do the same. Only install the app from these official stores. Apps with similar names from other websites may be fake and could harm your phone or steal your information.</p>
+<p>The app is free to download. You will need a little mobile data or a Wi-Fi connection to install it, and enough free storage space on your phone. If the download is slow, switch to Wi-Fi and try again.</p>
+<h2>Logging in for the first time</h2>
+<p>Open the app and enter your Zong mobile number. The app will send a verification code to that number by SMS. Enter the code in the app to confirm that the number belongs to you. This step is important: never share the verification code with anyone, and never enter it on any other website or app.</p>
+<p>Once you are logged in, the app will show your balance, your active bundles and your remaining data on the home screen. You may also be asked to allow notifications. Allowing them is useful, because the app uses notifications to tell you about rewards, bundle expiry and new offers.</p>
+<h2>Finding the daily quiz</h2>
+<p>After logging in, look for the quiz on the home screen. It usually appears as a banner, card or icon with a quiz or rewards theme. Its exact position can change when the app is updated, so if you do not see it immediately, scroll down the home screen or look in a rewards, offers or "play and win" section.</p>
+<p>Tap the quiz card to open the game. Read the short instructions on the quiz screen — they tell you how many questions there are, whether there is a time limit, and what score you need for a reward. Then tap start and answer each question. Your result and any reward are normally shown right after you finish.</p>
+<h2>Other useful features</h2>
+<p>The app does much more than the quiz. You can check your remaining balance and data, see which bundles are active on your number, buy new bundles, and view your usage history. The app also shows special offers, daily check-in rewards and sometimes a spin wheel or bonus game. Browsing these sections once a day is a good habit — many users miss free data simply because they never open the offers page.</p>
+<p>You can also manage more than one Zong number in the app if you have several SIMs, and you can recharge your balance through the app using a bank card or mobile wallet where supported.</p>
+<h2>If the app does not work</h2>
+<p>If the app crashes or will not open, first check that your phone has an internet connection and enough free storage. Then update the app to the latest version from the Play Store or App Store, close it completely and open it again. If the problem continues, clear the app's cache from your phone settings (Android) or delete and reinstall the app (iPhone and Android). As a last step, call Zong support on 310 and explain the problem.</p>
+<p>Keep your app updated. Zong changes the quiz, rewards and offers regularly, and older versions of the app may not show the newest features at all.</p>
+</article>
+<div class="faq"><h2>Frequently asked questions</h2><details><summary>Is the My Zong app free?</summary><p>Yes, the app is free to download and use. You only use a small amount of data when it loads.</p></details><details><summary>Where is the quiz inside the app?</summary><p>Usually on the home screen as a banner or card, or in a rewards or offers section. Its position can change after app updates.</p></details><details><summary>I did not receive the login code. What should I do?</summary><p>Wait a minute, check your signal, and ask for the code again. If it still does not arrive, restart your phone or call 310.</p></details></div>
+<h2>Related guides</h2>
+<ul><li><a href="/guides/zong-daily-quiz-how-it-works.html">How the Zong Daily Quiz Works (My Zong App)</a></li><li><a href="/guides/zong-quiz-answers-where-to-find.html">Where to Find Zong Quiz Answers Today</a></li><li><a href="/guides/zong-quiz-rewards-explained.html">Zong Quiz Rewards Explained</a></li></ul>
+<div class="note"><strong>Note:</strong> This site is unofficial and independent — not affiliated with Zong. Codes, prices, packages and rewards change often; confirm the current details in the official My Zong app or by calling 310.</div>
+
+</div>
+<footer><div class="foot-in">
+<nav><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy Policy</a><a href="/disclaimer.html">Disclaimer</a></nav>
+<p><strong>Zong Quiz Today</strong> — daily quiz answers, mobile codes and guides for Zong users in Pakistan.</p>
+<p>Unofficial &amp; independent — not affiliated with Zong, Zong CMPak Ltd, or any telecom company. Codes, prices, packages and rewards change often; always confirm the current details in the official My Zong app or by calling the Zong helpline 310.</p>
+<p>&copy; 2026 Zong Quiz Today. All rights reserved.</p>
+</div></footer>
+</body>
+</html>

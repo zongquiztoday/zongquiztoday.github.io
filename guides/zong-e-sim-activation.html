@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{TITLE}</title>
+<meta name="description" content="{DESC}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.65}
+a{color:#4a9e32;text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:#1F2937;color:#fff;position:sticky;top:0;z-index:10}
+.topbar-in{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:800;color:#fff}.logo span{color:#6DBE45}
+.nav{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}.nav a{color:#d1d5db;font-size:14px;font-weight:600}.nav a:hover{color:#6DBE45}
+.container{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+.hero{background:#f4faf1;border:1px solid #d9eccb;border-radius:14px;padding:22px;margin:18px 0}
+.hero h1{margin:0 0 8px;font-size:28px;line-height:1.25}.hero p{margin:6px 0;color:#374151}
+.tool-card{background:#fff;border:2px solid #6DBE45;border-radius:14px;padding:20px;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.tool-card h2{margin-top:0;color:#1F2937}.tool-card h2 .tag{background:#6DBE45;color:#fff;font-size:12px;padding:3px 8px;border-radius:20px;vertical-align:middle;margin-left:6px}
+.btn{display:inline-block;background:#6DBE45;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer}
+.btn:hover{background:#57a836}.btn.ghost{background:#fff;color:#1F2937;border:2px solid #1F2937}
+input,select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px;margin:6px 0 12px}
+label{font-weight:600;font-size:14px}
+.opt{display:block;width:100%;text-align:left;background:#f9fafb;border:1px solid #d1d5db;border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;font-size:15px}
+.opt:hover{border-color:#6DBE45}.opt.correct{background:#dcfce7;border-color:#16a34a}.opt.wrong{background:#fee2e2;border-color:#dc2626}.opt:disabled{cursor:default;opacity:.9}
+.quiz-meta{font-size:14px;color:#6b7280;margin:6px 0}
+.result{background:#f4faf1;border:1px solid #6DBE45;border-radius:10px;padding:16px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:18px 0}
+.card{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
+.card img{width:100%;height:150px;object-fit:cover;display:block}
+.card-body{padding:14px}.card-body h3{margin:0 0 6px;font-size:16px;line-height:1.35}.card-body h3 a{color:#1F2937}.card-body p{margin:0;font-size:14px;color:#6b7280}
+.section-title{font-size:22px;margin:28px 0 6px;border-bottom:3px solid #6DBE45;padding-bottom:6px;display:inline-block}
+.hero-img{width:100%;max-height:380px;object-fit:cover;border-radius:12px;margin:12px 0}
+article h2{margin-top:26px}article h3{margin-top:20px}
+.faq{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:16px;margin:22px 0}
+.faq h2{margin-top:0}.faq details{margin:10px 0}.faq summary{font-weight:700;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:12px 16px;margin:18px 0;font-size:14px}
+footer{background:#1F2937;color:#d1d5db;margin-top:30px}
+.foot-in{max-width:980px;margin:0 auto;padding:26px 16px;font-size:14px}
+.foot-in a{color:#9ed67f}.foot-in nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0}th,td{border:1px solid #d1d5db;padding:8px 10px;text-align:left;font-size:14px}th{background:#f4faf1}
+.code-row{border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;margin:8px 0}.code-row b{color:#1F2937}.code-row code{background:#f4faf1;color:#166534;padding:2px 6px;border-radius:5px;font-size:15px}
+.daily-q{margin:16px 0;padding-top:12px;border-top:1px dashed #d1d5db}.daily-q:first-child{border-top:none;padding-top:0}.daily-q h3{margin:0 0 4px;font-size:16px}
+@media(max-width:640px){.hero h1{font-size:22px}.topbar-in{gap:8px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a class="logo" href="/index.html">Zong<span>Quiz</span>Today</a>
+<nav class="nav"><a href="/index.html">Home</a><a href="/index.html#quiz">Quiz</a><a href="/index.html#codes">Codes</a><a href="/index.html#guides">Guides</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+</div></header>
+<div class="container">
+
+<p><a href="/index.html">&larr; Back to home</a></p>
+<h1>Zong eSIM: How to Activate and Use It</h1>
+<img class="hero-img" src="/images/zong-e-sim-activation.jpg" alt="Zong eSIM: How to Activate and Use It">
+<article>
+<p>An eSIM is a digital SIM built into your phone. Instead of inserting a small plastic card, you activate your mobile plan by scanning a QR code or entering details in your phone's settings. Zong supports eSIM for compatible phones, and it is a convenient option if your phone has no free SIM slot or you want to use two numbers at once. This guide explains how to get and activate a Zong eSIM.</p>
+<h2>What is an eSIM?</h2>
+<p>A traditional SIM is a physical chip you put into your phone. An eSIM does the same job, but it is a small chip already built into the phone, and your mobile plan is loaded onto it digitally. Your number, calls, SMS and data work exactly the same as with a physical SIM — the only difference is how the plan is installed.</p>
+<p>Many modern phones support eSIM, including recent iPhones and Samsung, Google Pixel and other Android phones. Older phones and budget models often do not. Check your phone's settings or manual to see whether it supports eSIM before you apply.</p>
+<h2>How to get a Zong eSIM</h2>
+<p>To get a Zong eSIM, you normally need to visit a Zong service centre or authorised franchise with your original CNIC. The staff verify your identity, as required by law, and issue the eSIM — usually as a QR code printed on a card or shown on a screen. Some new connections and SIM replacements can also be arranged through official Zong channels, but identity verification in person is usually required.</p>
+<p>Ask the staff whether your current number and bundles will carry over to the eSIM. In most cases your number stays the same and your existing balance and bundles continue as normal, but confirm this before the switch.</p>
+<h2>Activating the eSIM on your phone</h2>
+<p>On an iPhone, go to Settings, then Mobile Service or Cellular, then Add eSIM, and scan the QR code. On Android, the path is usually Settings, then Connections or Network, then SIM Manager, then Add eSIM, and scan the QR code. Your phone will download the plan and ask you to confirm. Make sure you have a Wi-Fi connection during activation, because the phone needs the internet to download the eSIM profile.</p>
+<p>Once the eSIM is installed, set it as your line for calls, SMS and data. If you also have a physical SIM in the phone, you can choose which SIM to use for each purpose, or use one for calls and the other for data.</p>
+<h2>Using two numbers at once</h2>
+<p>One of the best things about eSIM is dual SIM use. Many phones can use a physical SIM and an eSIM at the same time, giving you two numbers in one phone. This is useful if you have a Zong number for personal use and another network for work, or if you travel and want to add a local eSIM while keeping your Zong number active for SMS.</p>
+<p>Label each line clearly in your phone settings — for example "Zong Personal" and "Work" — so you always know which number you are calling or texting from.</p>
+<h2>If activation fails</h2>
+<p>If the QR code does not scan, check that the camera lens is clean and the code is well lit. Make sure your phone has an internet connection and that it supports eSIM. Do not delete the eSIM profile if activation fails — contact the service centre that issued it, because a QR code can usually only be used a limited number of times.</p>
+<p>If the eSIM installs but you have no signal, restart your phone, check that the line is turned on in your settings, and confirm that the eSIM is selected for mobile data. If the problem continues, visit a Zong service centre or call 310 for help.</p>
+</article>
+<div class="faq"><h2>Frequently asked questions</h2><details><summary>What is a Zong eSIM?</summary><p>A digital SIM built into your phone. Your plan is loaded by scanning a QR code instead of inserting a plastic SIM card.</p></details><details><summary>Does my phone support eSIM?</summary><p>Many recent iPhones and Android phones do; older and budget phones often do not. Check your phone&#x27;s settings or manual.</p></details><details><summary>How do I get a Zong eSIM?</summary><p>Visit a Zong service centre with your original CNIC for identity verification. The eSIM is issued as a QR code.</p></details></div>
+<h2>Related guides</h2>
+<ul><li><a href="/guides/zong-daily-quiz-how-it-works.html">How the Zong Daily Quiz Works (My Zong App)</a></li><li><a href="/guides/zong-quiz-answers-where-to-find.html">Where to Find Zong Quiz Answers Today</a></li><li><a href="/guides/zong-quiz-rewards-explained.html">Zong Quiz Rewards Explained</a></li></ul>
+<div class="note"><strong>Note:</strong> This site is unofficial and independent — not affiliated with Zong. Codes, prices, packages and rewards change often; confirm the current details in the official My Zong app or by calling 310.</div>
+
+</div>
+<footer><div class="foot-in">
+<nav><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy Policy</a><a href="/disclaimer.html">Disclaimer</a></nav>
+<p><strong>Zong Quiz Today</strong> — daily quiz answers, mobile codes and guides for Zong users in Pakistan.</p>
+<p>Unofficial &amp; independent — not affiliated with Zong, Zong CMPak Ltd, or any telecom company. Codes, prices, packages and rewards change often; always confirm the current details in the official My Zong app or by calling the Zong helpline 310.</p>
+<p>&copy; 2026 Zong Quiz Today. All rights reserved.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{TITLE}</title>
+<meta name="description" content="{DESC}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.65}
+a{color:#4a9e32;text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:#1F2937;color:#fff;position:sticky;top:0;z-index:10}
+.topbar-in{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:800;color:#fff}.logo span{color:#6DBE45}
+.nav{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}.nav a{color:#d1d5db;font-size:14px;font-weight:600}.nav a:hover{color:#6DBE45}
+.container{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+.hero{background:#f4faf1;border:1px solid #d9eccb;border-radius:14px;padding:22px;margin:18px 0}
+.hero h1{margin:0 0 8px;font-size:28px;line-height:1.25}.hero p{margin:6px 0;color:#374151}
+.tool-card{background:#fff;border:2px solid #6DBE45;border-radius:14px;padding:20px;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.tool-card h2{margin-top:0;color:#1F2937}.tool-card h2 .tag{background:#6DBE45;color:#fff;font-size:12px;padding:3px 8px;border-radius:20px;vertical-align:middle;margin-left:6px}
+.btn{display:inline-block;background:#6DBE45;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer}
+.btn:hover{background:#57a836}.btn.ghost{background:#fff;color:#1F2937;border:2px solid #1F2937}
+input,select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px;margin:6px 0 12px}
+label{font-weight:600;font-size:14px}
+.opt{display:block;width:100%;text-align:left;background:#f9fafb;border:1px solid #d1d5db;border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;font-size:15px}
+.opt:hover{border-color:#6DBE45}.opt.correct{background:#dcfce7;border-color:#16a34a}.opt.wrong{background:#fee2e2;border-color:#dc2626}.opt:disabled{cursor:default;opacity:.9}
+.quiz-meta{font-size:14px;color:#6b7280;margin:6px 0}
+.result{background:#f4faf1;border:1px solid #6DBE45;border-radius:10px;padding:16px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:18px 0}
+.card{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
+.card img{width:100%;height:150px;object-fit:cover;display:block}
+.card-body{padding:14px}.card-body h3{margin:0 0 6px;font-size:16px;line-height:1.35}.card-body h3 a{color:#1F2937}.card-body p{margin:0;font-size:14px;color:#6b7280}
+.section-title{font-size:22px;margin:28px 0 6px;border-bottom:3px solid #6DBE45;padding-bottom:6px;display:inline-block}
+.hero-img{width:100%;max-height:380px;object-fit:cover;border-radius:12px;margin:12px 0}
+article h2{margin-top:26px}article h3{margin-top:20px}
+.faq{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:16px;margin:22px 0}
+.faq h2{margin-top:0}.faq details{margin:10px 0}.faq summary{font-weight:700;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:12px 16px;margin:18px 0;font-size:14px}
+footer{background:#1F2937;color:#d1d5db;margin-top:30px}
+.foot-in{max-width:980px;margin:0 auto;padding:26px 16px;font-size:14px}
+.foot-in a{color:#9ed67f}.foot-in nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0}th,td{border:1px solid #d1d5db;padding:8px 10px;text-align:left;font-size:14px}th{background:#f4faf1}
+.code-row{border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;margin:8px 0}.code-row b{color:#1F2937}.code-row code{background:#f4faf1;color:#166534;padding:2px 6px;border-radius:5px;font-size:15px}
+.daily-q{margin:16px 0;padding-top:12px;border-top:1px dashed #d1d5db}.daily-q:first-child{border-top:none;padding-top:0}.daily-q h3{margin:0 0 4px;font-size:16px}
+@media(max-width:640px){.hero h1{font-size:22px}.topbar-in{gap:8px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a class="logo" href="/index.html">Zong<span>Quiz</span>Today</a>
+<nav class="nav"><a href="/index.html">Home</a><a href="/index.html#quiz">Quiz</a><a href="/index.html#codes">Codes</a><a href="/index.html#guides">Guides</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+</div></header>
+<div class="container">
+
+<p><a href="/index.html">&larr; Back to home</a></p>
+<h1>Zong Helpline and Customer Support Numbers</h1>
+<img class="hero-img" src="/images/zong-helpline-support.jpg" alt="Zong Helpline and Customer Support Numbers">
+<article>
+<p>When something goes wrong with your Zong service — a bundle does not activate, a quiz reward is missing, or your balance looks wrong — you need to reach support quickly. This guide lists the official ways to contact Zong and explains how to get your problem solved with the least hassle.</p>
+<h2>The 310 helpline</h2>
+<p>The main way to reach Zong support is to call <strong>310</strong> from your Zong number. This connects you to Zong's customer service helpline, where an agent can check your account, your bundles and your balance. The helpline is the right choice for problems that need access to your account, such as a missing bundle, a wrong charge, or a quiz reward that never arrived.</p>
+<p>Before you call, have your details ready: your Zong number, the date and time of the problem, and any relevant information such as the name of the bundle or the score of your quiz round. A screenshot of an error message or a result screen is also very helpful. Calling with the facts ready means the agent can help you faster.</p>
+<h2>Help inside the My Zong app</h2>
+<p>The My Zong app also has help and support options. Look for a help, support or contact section inside the app, where you may find answers to common questions, a way to report a problem, or a chat option. The app is often the fastest way to solve simple problems yourself: you can check your balance, see active bundles, and view your usage without calling anyone.</p>
+<p>If the app itself is the problem — it will not open, will not log in, or shows the wrong information — try updating it, closing it fully and opening it again, or reinstalling it. If that does not help, call 310 and explain what the app is doing.</p>
+<h2>Visiting a Zong service centre</h2>
+<p>For problems that cannot be solved by phone, such as SIM replacement, biometric verification, or buying a new SIM, visit a Zong service centre or franchise. Take your original CNIC with you, because most in-person services need identity verification. The staff can also help with packages, new connections and account problems.</p>
+<p>Be careful to visit only official Zong service centres or authorised franchises. If someone on the street offers to "fix" your SIM or account for a fee, do not trust them — go to an official centre instead.</p>
+<h2>What to do about a complaint</h2>
+<p>If your problem is not solved on the first call, note down the complaint or reference number the agent gives you. Ask when you can expect a reply, and call back with the reference number if nothing happens by then. Keeping a record of dates, times and reference numbers makes a follow-up complaint much easier.</p>
+<p>If a charge on your account looks wrong, check the usage and transaction history in the My Zong app first. Sometimes a bundle renewed automatically, or a subscription you forgot about is charging you. The app shows these details, and support can explain any charge you do not recognise.</p>
+<h2>Staying safe when contacting support</h2>
+<p>Zong support will never ask you for your password, your verification code, or your bank card details over the phone. Never share those with anyone who calls you claiming to be from Zong. If you receive a suspicious call or message asking for personal details, end the call and report it by calling 310 yourself.</p>
+<p>Real support contacts you only through official channels: the 310 helpline, the My Zong app, or an official Zong service centre. Anyone else offering help with your account for money or personal details is almost certainly a scammer.</p>
+</article>
+<div class="faq"><h2>Frequently asked questions</h2><details><summary>What is the Zong helpline number?</summary><p>Call 310 from your Zong number to reach Zong customer support.</p></details><details><summary>Can I get help inside the My Zong app?</summary><p>Yes — the app has a help or support section, and it also lets you check balance, bundles and usage yourself.</p></details><details><summary>What should I take to a Zong service centre?</summary><p>Your original CNIC, because most in-person services need identity verification.</p></details></div>
+<h2>Related guides</h2>
+<ul><li><a href="/guides/zong-daily-quiz-how-it-works.html">How the Zong Daily Quiz Works (My Zong App)</a></li><li><a href="/guides/zong-quiz-answers-where-to-find.html">Where to Find Zong Quiz Answers Today</a></li><li><a href="/guides/zong-quiz-rewards-explained.html">Zong Quiz Rewards Explained</a></li></ul>
+<div class="note"><strong>Note:</strong> This site is unofficial and independent — not affiliated with Zong. Codes, prices, packages and rewards change often; confirm the current details in the official My Zong app or by calling 310.</div>
+
+</div>
+<footer><div class="foot-in">
+<nav><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy Policy</a><a href="/disclaimer.html">Disclaimer</a></nav>
+<p><strong>Zong Quiz Today</strong> — daily quiz answers, mobile codes and guides for Zong users in Pakistan.</p>
+<p>Unofficial &amp; independent — not affiliated with Zong, Zong CMPak Ltd, or any telecom company. Codes, prices, packages and rewards change often; always confirm the current details in the official My Zong app or by calling the Zong helpline 310.</p>
+<p>&copy; 2026 Zong Quiz Today. All rights reserved.</p>
+</div></footer>
+</body>
+</html>
