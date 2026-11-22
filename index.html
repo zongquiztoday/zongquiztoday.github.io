@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{TITLE}</title>
+<meta name="description" content="{DESC}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.65}
+a{color:#4a9e32;text-decoration:none}a:hover{text-decoration:underline}
+.topbar{background:#1F2937;color:#fff;position:sticky;top:0;z-index:10}
+.topbar-in{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:800;color:#fff}.logo span{color:#6DBE45}
+.nav{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}.nav a{color:#d1d5db;font-size:14px;font-weight:600}.nav a:hover{color:#6DBE45}
+.container{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+.hero{background:#f4faf1;border:1px solid #d9eccb;border-radius:14px;padding:22px;margin:18px 0}
+.hero h1{margin:0 0 8px;font-size:28px;line-height:1.25}.hero p{margin:6px 0;color:#374151}
+.tool-card{background:#fff;border:2px solid #6DBE45;border-radius:14px;padding:20px;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.tool-card h2{margin-top:0;color:#1F2937}.tool-card h2 .tag{background:#6DBE45;color:#fff;font-size:12px;padding:3px 8px;border-radius:20px;vertical-align:middle;margin-left:6px}
+.btn{display:inline-block;background:#6DBE45;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer}
+.btn:hover{background:#57a836}.btn.ghost{background:#fff;color:#1F2937;border:2px solid #1F2937}
+input,select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px;margin:6px 0 12px}
+label{font-weight:600;font-size:14px}
+.opt{display:block;width:100%;text-align:left;background:#f9fafb;border:1px solid #d1d5db;border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;font-size:15px}
+.opt:hover{border-color:#6DBE45}.opt.correct{background:#dcfce7;border-color:#16a34a}.opt.wrong{background:#fee2e2;border-color:#dc2626}.opt:disabled{cursor:default;opacity:.9}
+.quiz-meta{font-size:14px;color:#6b7280;margin:6px 0}
+.result{background:#f4faf1;border:1px solid #6DBE45;border-radius:10px;padding:16px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:18px 0}
+.card{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
+.card img{width:100%;height:150px;object-fit:cover;display:block}
+.card-body{padding:14px}.card-body h3{margin:0 0 6px;font-size:16px;line-height:1.35}.card-body h3 a{color:#1F2937}.card-body p{margin:0;font-size:14px;color:#6b7280}
+.section-title{font-size:22px;margin:28px 0 6px;border-bottom:3px solid #6DBE45;padding-bottom:6px;display:inline-block}
+.hero-img{width:100%;max-height:380px;object-fit:cover;border-radius:12px;margin:12px 0}
+article h2{margin-top:26px}article h3{margin-top:20px}
+.faq{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:16px;margin:22px 0}
+.faq h2{margin-top:0}.faq details{margin:10px 0}.faq summary{font-weight:700;cursor:pointer}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:12px 16px;margin:18px 0;font-size:14px}
+footer{background:#1F2937;color:#d1d5db;margin-top:30px}
+.foot-in{max-width:980px;margin:0 auto;padding:26px 16px;font-size:14px}
+.foot-in a{color:#9ed67f}.foot-in nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+table{border-collapse:collapse;width:100%;margin:14px 0}th,td{border:1px solid #d1d5db;padding:8px 10px;text-align:left;font-size:14px}th{background:#f4faf1}
+.code-row{border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;margin:8px 0}.code-row b{color:#1F2937}.code-row code{background:#f4faf1;color:#166534;padding:2px 6px;border-radius:5px;font-size:15px}
+.daily-q{margin:16px 0;padding-top:12px;border-top:1px dashed #d1d5db}.daily-q:first-child{border-top:none;padding-top:0}.daily-q h3{margin:0 0 4px;font-size:16px}
+@media(max-width:640px){.hero h1{font-size:22px}.topbar-in{gap:8px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a class="logo" href="/index.html">Zong<span>Quiz</span>Today</a>
+<nav class="nav"><a href="/index.html">Home</a><a href="/index.html#quiz">Quiz</a><a href="/index.html#codes">Codes</a><a href="/index.html#guides">Guides</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+</div></header>
+<div class="container">
+
+<div class="hero">
+<h1>Zong Quiz Today — Daily Quiz Answers, Codes &amp; Guides for Pakistan</h1>
+<p>Practice the Zong quiz, find USSD codes, compare bundles and read simple guides — all in one place. Unofficial and independent: we are not affiliated with Zong. Always confirm codes, prices and rewards in the official My Zong app.</p>
+</div>
+
+<div class="tool-card" id="today-answer" style="border-width:3px">
+<h2 id="daily-date">Today's 5 Quiz Answers</h2>
+<div id="daily-list"></div>
+<p id="daily-note" class="quiz-meta"></p>
+<p style="font-size:13px;color:#6b7280">Five general-knowledge questions from our pool, picked automatically by today's date in Pakistan time — the set changes every day at midnight (Asia/Karachi). These are practice questions in the style of the My Zong daily quiz; the official quiz inside the My Zong app has its own fresh questions each day. Rewards and eligibility are decided only by the operator inside its official app.</p>
+</div>
+
+<div class="tool-card" id="quiz">
+<h2>Zong Quiz Practice <span class="tag">Play now</span></h2>
+<p>Ten general-knowledge questions, just like the daily quiz. Answer, get instant feedback, and see your score at the end.</p>
+<div id="quiz-body">
+<p class="quiz-meta"><span id="qnum"></span> &nbsp;|&nbsp; <span id="qscore"></span></p>
+<h3 id="qtext"></h3>
+<div id="qopts"></div>
+<p id="qfeed" style="font-weight:700"></p>
+<button class="btn" id="qnext" style="display:none" onclick="nextQ()">Next question</button>
+</div>
+<p style="font-size:13px;color:#6b7280">The real daily quiz runs inside the official My Zong app — its questions change every day. This practice quiz helps you prepare.</p>
+</div>
+
+<h2 class="section-title" id="codes">Zong Code Finder</h2>
+<p>Search well-known Zong USSD codes by keyword — for example "balance", "data" or "number".</p>
+<div class="tool-card">
+<label for="code-search">Search codes</label>
+<input id="code-search" type="text" placeholder="Type a keyword, e.g. balance" oninput="renderCodes(this.value)">
+<div id="code-list"></div>
+<p style="font-size:13px;color:#6b7280">Codes are the widely published ones. Confirm current codes in the My Zong app, as they can change.</p>
+</div>
+
+<h2 class="section-title">Zong Data Calculator</h2>
+<div class="tool-card">
+<p>Enter an amount of data in MB to see how much that is in GB and roughly how long it lasts.</p>
+<label for="mb">Data in MB</label>
+<input id="mb" type="number" min="1" placeholder="e.g. 1024">
+<button class="btn" onclick="calcData()">Calculate</button>
+<div id="data-out"></div>
+</div>
+
+<h2 class="section-title">Zong Package Finder</h2>
+<div class="tool-card">
+<p>Tell us how much data and how many minutes you need, and we will suggest a bundle from our list.</p>
+<label for="need-data">Data needed (GB per month)</label>
+<input id="need-data" type="number" min="0" placeholder="e.g. 10">
+<label for="need-mins">Minutes needed (per month)</label>
+<input id="need-mins" type="number" min="0" placeholder="e.g. 1000">
+<button class="btn" onclick="findPkg()">Find a package</button>
+<div id="pkg-out"></div>
+<p style="font-size:13px;color:#6b7280">Package names and sizes are indicative examples — confirm the current price in the My Zong app, as offers change.</p>
+</div>
+
+<h2 class="section-title">Package Expiry Checker</h2>
+<div class="tool-card">
+<p>Enter the date you activated a package and its validity in days to find its expiry date.</p>
+<label for="act-date">Activation date</label>
+<input id="act-date" type="date">
+<label for="valid-days">Validity (days)</label>
+<input id="valid-days" type="number" min="1" placeholder="e.g. 30">
+<button class="btn" onclick="checkExpiry()">Check expiry date</button>
+<div id="exp-out"></div>
+</div>
+
+<h2 class="section-title" id="guides">Guides &amp; Articles</h2>
+<p>Simple, practical guides about the Zong quiz, codes, bundles and the My Zong app.</p>
+<div class="grid">
+<div class="card"><a href="/guides/zong-daily-quiz-how-it-works.html"><img src="/images/zong-daily-quiz-how-it-works.jpg" alt="How the Zong Daily Quiz Works (My Zong App)"></a><div class="card-body"><h3><a href="/guides/zong-daily-quiz-how-it-works.html">How the Zong Daily Quiz Works (My Zong App)</a></h3><p>Learn how the Zong daily quiz works in the My Zong app: where to find it, how to play, how answers are scored and how rewards are given.</p></div></div>
+<div class="card"><a href="/guides/zong-quiz-answers-where-to-find.html"><img src="/images/zong-quiz-answers-where-to-find.jpg" alt="Where to Find Zong Quiz Answers Today"></a><div class="card-body"><h3><a href="/guides/zong-quiz-answers-where-to-find.html">Where to Find Zong Quiz Answers Today</a></h3><p>Find out where to get today&#x27;s Zong quiz answers safely: the official My Zong app, general-knowledge practice, and how to avoid fake answer sites.</p></div></div>
+<div class="card"><a href="/guides/zong-quiz-rewards-explained.html"><img src="/images/zong-quiz-rewards-explained.jpg" alt="Zong Quiz Rewards Explained"></a><div class="card-body"><h3><a href="/guides/zong-quiz-rewards-explained.html">Zong Quiz Rewards Explained</a></h3><p>A clear guide to Zong quiz rewards: what you can win, how rewards are calculated, when they arrive and what to do if a reward is missing.</p></div></div>
+<div class="card"><a href="/guides/my-zong-app-guide.html"><img src="/images/my-zong-app-guide.jpg" alt="My Zong App: Download and Use It for the Quiz"></a><div class="card-body"><h3><a href="/guides/my-zong-app-guide.html">My Zong App: Download and Use It for the Quiz</a></h3><p>How to download the My Zong app, create your account, log in, find the daily quiz and use the app to check balance, bundles and rewards.</p></div></div>
+<div class="card"><a href="/guides/zong-balance-check-code.html"><img src="/images/zong-balance-check-code.jpg" alt="Zong Balance Check Code"></a><div class="card-body"><h3><a href="/guides/zong-balance-check-code.html">Zong Balance Check Code</a></h3><p>How to check your Zong balance with the *222# code, in the My Zong app, and what to do if the balance check does not work.</p></div></div>
+<div class="card"><a href="/guides/zong-4g-data-bundles.html"><img src="/images/zong-4g-data-bundles.jpg" alt="Zong 4G Data Bundles Guide 2026"></a><div class="card-body"><h3><a href="/guides/zong-4g-data-bundles.html">Zong 4G Data Bundles Guide 2026</a></h3><p>A practical guide to Zong 4G data bundles in 2026: daily, weekly and monthly options, how to choose, and how to activate in the My Zong app.</p></div></div>
+<div class="card"><a href="/guides/zong-call-packages.html"><img src="/images/zong-call-packages.jpg" alt="Zong Call Packages Guide"></a><div class="card-body"><h3><a href="/guides/zong-call-packages.html">Zong Call Packages Guide</a></h3><p>How Zong call packages work: on-net and off-net minutes, daily, weekly and monthly options, and how to pick the right one.</p></div></div>
+<div class="card"><a href="/guides/zong-sms-bundles.html"><img src="/images/zong-sms-bundles.jpg" alt="Zong SMS Bundles and Codes"></a><div class="card-body"><h3><a href="/guides/zong-sms-bundles.html">Zong SMS Bundles and Codes</a></h3><p>A guide to Zong SMS bundles: how SMS bundles work, when they are useful, how to subscribe and how to check remaining SMS.</p></div></div>
+<div class="card"><a href="/guides/zong-free-data-rewards.html"><img src="/images/zong-free-data-rewards.jpg" alt="Zong Free Data and Daily Rewards"></a><div class="card-body"><h3><a href="/guides/zong-free-data-rewards.html">Zong Free Data and Daily Rewards</a></h3><p>How to get free Zong data and daily rewards: the quiz, daily check-ins, app offers and other official ways to earn bonus MB.</p></div></div>
+<div class="card"><a href="/guides/zong-quiz-eligibility-rules.html"><img src="/images/zong-quiz-eligibility-rules.jpg" alt="Zong Quiz Eligibility and Rules"></a><div class="card-body"><h3><a href="/guides/zong-quiz-eligibility-rules.html">Zong Quiz Eligibility and Rules</a></h3><p>Who can play the Zong daily quiz, what the rules are, how many times you can play, and what can disqualify you.</p></div></div>
+<div class="card"><a href="/guides/zong-quiz-tips.html"><img src="/images/zong-quiz-tips.jpg" alt="Zong Quiz Tips: How to Win More Rewards"></a><div class="card-body"><h3><a href="/guides/zong-quiz-tips.html">Zong Quiz Tips: How to Win More Rewards</a></h3><p>Practical tips to score higher in the Zong daily quiz: preparation, reading questions carefully, managing the timer and building a daily habit.</p></div></div>
+<div class="card"><a href="/guides/zong-quiz-question-types.html"><img src="/images/zong-quiz-question-types.jpg" alt="Zong Quiz Question Types and Preparation"></a><div class="card-body"><h3><a href="/guides/zong-quiz-question-types.html">Zong Quiz Question Types and Preparation</a></h3><p>What kinds of questions appear in the Zong daily quiz, with examples of each type and how to prepare for them.</p></div></div>
+<div class="card"><a href="/guides/zong-monthly-bundles-guide.html"><img src="/images/zong-monthly-bundles-guide.jpg" alt="Zong Monthly Bundles: Which One Is Right for You"></a><div class="card-body"><h3><a href="/guides/zong-monthly-bundles-guide.html">Zong Monthly Bundles: Which One Is Right for You</a></h3><p>Compare Zong monthly bundles and learn how to choose based on your data use, calls and budget, with tips to avoid wasting data.</p></div></div>
+<div class="card"><a href="/guides/zong-student-packages.html"><img src="/images/zong-student-packages.jpg" alt="Zong Student and Youth Packages"></a><div class="card-body"><h3><a href="/guides/zong-student-packages.html">Zong Student and Youth Packages</a></h3><p>A guide to Zong packages for students and young users: affordable data, study-friendly bundles and tips to keep costs low.</p></div></div>
+<div class="card"><a href="/guides/zong-helpline-support.html"><img src="/images/zong-helpline-support.jpg" alt="Zong Helpline and Customer Support Numbers"></a><div class="card-body"><h3><a href="/guides/zong-helpline-support.html">Zong Helpline and Customer Support Numbers</a></h3><p>How to contact Zong customer support: the 310 helpline, the My Zong app, and tips to get your problem solved quickly.</p></div></div>
+<div class="card"><a href="/guides/zong-quiz-rewards-delivery.html"><img src="/images/zong-quiz-rewards-delivery.jpg" alt="How Zong Quiz Rewards Are Delivered"></a><div class="card-body"><h3><a href="/guides/zong-quiz-rewards-delivery.html">How Zong Quiz Rewards Are Delivered</a></h3><p>When and how Zong quiz rewards reach your account, how to check them, and what to do if a reward is delayed or missing.</p></div></div>
+<div class="card"><a href="/guides/zong-package-codes-list.html"><img src="/images/zong-package-codes-list.jpg" alt="Zong Package Codes (Complete List)"></a><div class="card-body"><h3><a href="/guides/zong-package-codes-list.html">Zong Package Codes (Complete List)</a></h3><p>A complete list of the best-known Zong package and check codes, with what each one does and how to use them safely.</p></div></div>
+<div class="card"><a href="/guides/zong-quiz-not-loading-fix.html"><img src="/images/zong-quiz-not-loading-fix.jpg" alt="Zong Quiz Not Loading? How to Fix It"></a><div class="card-body"><h3><a href="/guides/zong-quiz-not-loading-fix.html">Zong Quiz Not Loading? How to Fix It</a></h3><p>Fix the Zong daily quiz when it will not load: app updates, internet checks, cache clearing and when to contact support.</p></div></div>
+<div class="card"><a href="/guides/zong-international-roaming.html"><img src="/images/zong-international-roaming.jpg" alt="Zong International Roaming Packages"></a><div class="card-body"><h3><a href="/guides/zong-international-roaming.html">Zong International Roaming Packages</a></h3><p>A guide to Zong international roaming: how roaming works, what it costs, how to activate it before you travel, and tips to avoid a big bill.</p></div></div>
+<div class="card"><a href="/guides/zong-e-sim-activation.html"><img src="/images/zong-e-sim-activation.jpg" alt="Zong eSIM: How to Activate and Use It"></a><div class="card-body"><h3><a href="/guides/zong-e-sim-activation.html">Zong eSIM: How to Activate and Use It</a></h3><p>How to get a Zong eSIM, activate it on your phone, and what to know before switching from a physical SIM.</p></div></div>
+</div>
+
+<div class="note"><strong>Disclaimer:</strong> Zong Quiz Today is unofficial and independent — not affiliated with Zong or any telecom company. Quiz questions change daily, so we do not publish daily answers. Codes, prices, packages and rewards change often; confirm everything in the official My Zong app or by calling 310.</div>
+<script>
+const DAILY=[["What is the capital of Pakistan?", ["Karachi", "Lahore", "Islamabad", "Peshawar"], 2], ["Which is the largest province of Pakistan by area?", ["Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan"], 3], ["What is the national language of Pakistan?", ["Punjabi", "Urdu", "Pashto", "Sindhi"], 1], ["What is the national animal of Pakistan?", ["Lion", "Markhor", "Snow leopard", "Tiger"], 1], ["What is the national flower of Pakistan?", ["Rose", "Jasmine", "Sunflower", "Tulip"], 1], ["Which is the longest river in Pakistan?", ["Ravi", "Chenab", "Jhelum", "Indus"], 3], ["On which date did Pakistan gain independence?", ["23 March 1940", "14 August 1947", "25 December 1947", "6 September 1965"], 1], ["Who is the founder of Pakistan?", ["Allama Iqbal", "Liaquat Ali Khan", "Muhammad Ali Jinnah", "Sir Syed Ahmed Khan"], 2], ["Who is known as the national poet of Pakistan?", ["Mir Taqi Mir", "Allama Muhammad Iqbal", "Faiz Ahmed Faiz", "Ahmed Faraz"], 1], ["Which is the highest mountain in Pakistan?", ["Nanga Parbat", "K2", "Broad Peak", "Rakaposhi"], 1], ["What is the currency of Pakistan?", ["Taka", "Rupee", "Dinar", "Riyal"], 1], ["What is the capital of Punjab province?", ["Multan", "Rawalpindi", "Faisalabad", "Lahore"], 3], ["What is the capital of Sindh province?", ["Hyderabad", "Karachi", "Sukkur", "Larkana"], 1], ["What is the capital of Balochistan province?", ["Gwadar", "Quetta", "Turbat", "Khuzdar"], 1], ["What is the capital of Khyber Pakhtunkhwa province?", ["Abbottabad", "Mardan", "Peshawar", "Swat"], 2], ["Which is the largest city of Pakistan by population?", ["Lahore", "Karachi", "Faisalabad", "Rawalpindi"], 1], ["What is the national bird of Pakistan?", ["Peacock", "Chukar partridge", "Eagle", "Houbara bustard"], 1], ["What is the national tree of Pakistan?", ["Mango", "Neem", "Deodar", "Sheesham"], 2], ["In which sport has Pakistan won the most Olympic gold medals?", ["Cricket", "Squash", "Field hockey", "Football"], 2], ["At what temperature does water boil at sea level?", ["90\u00b0C", "100\u00b0C", "80\u00b0C", "120\u00b0C"], 1], ["Which planet is closest to the Sun?", ["Venus", "Mars", "Mercury", "Earth"], 2], ["Which is the largest planet in our solar system?", ["Saturn", "Neptune", "Earth", "Jupiter"], 3], ["What is the chemical symbol for water?", ["CO2", "O2", "H2O", "NaCl"], 2], ["How many days are there in a leap year?", ["365", "364", "366", "360"], 2], ["Which is the largest ocean in the world?", ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"], 3], ["Which is the longest wall in the world?", ["Berlin Wall", "Great Wall of China", "Hadrian's Wall", "Western Wall"], 1], ["What is the capital of France?", ["Berlin", "Madrid", "Rome", "Paris"], 3], ["What is the capital of Japan?", ["Seoul", "Beijing", "Tokyo", "Bangkok"], 2], ["Which is the largest hot desert in the world?", ["Gobi Desert", "Kalahari Desert", "Sahara Desert", "Thar Desert"], 2], ["How many continents are there on Earth?", ["Five", "Six", "Seven", "Eight"], 2], ["Which is the first month of the Islamic calendar?", ["Ramadan", "Muharram", "Shawwal", "Rabi-ul-Awwal"], 1], ["How many Surahs are there in the Holy Quran?", ["110", "112", "114", "116"], 2], ["Which is the fastest land animal?", ["Lion", "Horse", "Cheetah", "Deer"], 2], ["Which is the largest mammal in the world?", ["African elephant", "Blue whale", "Giraffe", "Polar bear"], 1], ["How many players of a cricket team are on the field?", ["10", "11", "12", "9"], 1], ["Which is the largest mosque in Pakistan?", ["Badshahi Mosque", "Faisal Mosque", "Shah Jahan Mosque", "Grand Jamia Mosque"], 1], ["Which province has the largest population in Pakistan?", ["Sindh", "Balochistan", "Punjab", "Khyber Pakhtunkhwa"], 2], ["What is Pakistan's national motto?", ["Unity, Faith, Discipline", "Faith, Unity, Discipline", "Peace, Progress, Prosperity", "Strength, Honour, Pride"], 1], ["Who wrote Pakistan's national anthem?", ["Allama Iqbal", "Hafeez Jalandhari", "Faiz Ahmed Faiz", "Josh Malihabadi"], 1], ["Who was the first Prime Minister of Pakistan?", ["Iskander Mirza", "Liaquat Ali Khan", "Khawaja Nazimuddin", "Muhammad Ali Bogra"], 1], ["Who was the first President of Pakistan?", ["Ayub Khan", "Iskander Mirza", "Yahya Khan", "Zulfikar Ali Bhutto"], 1], ["What is the traditional national dress of Pakistan?", ["Kurta Pajama", "Sherwani", "Shalwar Kameez", "Dhoti Kurta"], 2], ["In which city is Minar-e-Pakistan located?", ["Karachi", "Islamabad", "Lahore", "Rawalpindi"], 2], ["In which city is the Badshahi Mosque located?", ["Multan", "Lahore", "Peshawar", "Islamabad"], 1], ["In which city is the Faisal Mosque located?", ["Lahore", "Karachi", "Islamabad", "Rawalpindi"], 2], ["Which is Pakistan's largest dam?", ["Mangla Dam", "Tarbela Dam", "Diamer-Bhasha Dam", "Warsak Dam"], 1], ["The Mangla Dam is built on which river?", ["Indus River", "Chenab River", "Jhelum River", "Ravi River"], 2], ["The Tarbela Dam is built on which river?", ["Jhelum River", "Indus River", "Chenab River", "Kabul River"], 1], ["In which year did Pakistan win the Cricket World Cup?", ["1987", "1992", "1999", "2011"], 1], ["Which Pakistani squash legend remained unbeaten for over five years?", ["Jansher Khan", "Jahangir Khan", "Qamar Zaman", "Hashim Khan"], 1], ["What is the nickname of fast bowler Shoaib Akhtar?", ["Sultan of Swing", "Rawalpindi Express", "King of Swing", "Speed Star"], 1], ["How long does a football match last in regular time?", ["60 minutes", "80 minutes", "90 minutes", "120 minutes"], 2], ["How often are the Olympic Games held?", ["Every 2 years", "Every 3 years", "Every 4 years", "Every 5 years"], 2], ["Which is the largest continent in the world?", ["Africa", "Asia", "Europe", "North America"], 1], ["Which is the smallest continent in the world?", ["Europe", "Australia", "Antarctica", "South America"], 1], ["Which is the largest country in the world by area?", ["China", "Canada", "USA", "Russia"], 3], ["Which is the smallest country in the world?", ["Monaco", "Malta", "Vatican City", "San Marino"], 2], ["What is the capital of the United Kingdom?", ["Manchester", "London", "Edinburgh", "Birmingham"], 1], ["What is the capital of the United States?", ["New York", "Los Angeles", "Washington, D.C.", "Chicago"], 2], ["What is the capital of China?", ["Shanghai", "Beijing", "Hong Kong", "Tianjin"], 1], ["What is the capital of India?", ["Mumbai", "Kolkata", "New Delhi", "Chennai"], 2], ["What is the capital of Turkey?", ["Istanbul", "Ankara", "Izmir", "Antalya"], 1], ["What is the capital of Saudi Arabia?", ["Jeddah", "Mecca", "Riyadh", "Medina"], 2], ["What is the capital of the United Arab Emirates?", ["Dubai", "Abu Dhabi", "Sharjah", "Ajman"], 1], ["What is the capital of Afghanistan?", ["Kandahar", "Herat", "Kabul", "Mazar-i-Sharif"], 2], ["What is the capital of Bangladesh?", ["Chittagong", "Dhaka", "Khulna", "Sylhet"], 1], ["What is the capital of Nepal?", ["Pokhara", "Kathmandu", "Lalitpur", "Bhaktapur"], 1], ["What is the capital of Australia?", ["Sydney", "Melbourne", "Canberra", "Perth"], 2], ["What is the capital of Canada?", ["Toronto", "Vancouver", "Ottawa", "Montreal"], 2], ["What is the capital of Germany?", ["Munich", "Hamburg", "Berlin", "Frankfurt"], 2], ["What is the capital of Italy?", ["Milan", "Venice", "Naples", "Rome"], 3], ["What is the capital of Spain?", ["Barcelona", "Madrid", "Seville", "Valencia"], 1], ["What is the capital of Russia?", ["St. Petersburg", "Moscow", "Kazan", "Novosibirsk"], 1], ["What is the capital of Egypt?", ["Alexandria", "Giza", "Cairo", "Luxor"], 2], ["What is the capital of Brazil?", ["Rio de Janeiro", "S\u00e3o Paulo", "Bras\u00edlia", "Salvador"], 2], ["Which is the longest river in the world?", ["Amazon River", "Yangtze River", "Nile River", "Indus River"], 2], ["Which is the largest island in the world?", ["Madagascar", "Borneo", "Greenland", "Sumatra"], 2], ["Which is the highest mountain in the world?", ["K2", "Mount Everest", "Kangchenjunga", "Lhotse"], 1], ["Which ocean contains the Mariana Trench?", ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"], 2], ["Which planet is known as the Red Planet?", ["Venus", "Jupiter", "Mars", "Saturn"], 2], ["How many planets are there in our solar system?", ["Seven", "Eight", "Nine", "Ten"], 1], ["Which planet has the most prominent rings?", ["Jupiter", "Mars", "Saturn", "Neptune"], 2], ["What is the Sun?", ["A planet", "A star", "A moon", "A comet"], 1], ["What is the chemical symbol for gold?", ["Ag", "Au", "Gd", "Go"], 1], ["What is the chemical symbol for oxygen?", ["Ox", "O", "Om", "Oy"], 1], ["What is the chemical symbol for iron?", ["Ir", "In", "Fe", "Io"], 2], ["Which gas do plants absorb from the air?", ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"], 2], ["Which part of the cell is known as its powerhouse?", ["Nucleus", "Ribosome", "Mitochondria", "Golgi body"], 2], ["How many bones are there in an adult human body?", ["196", "206", "216", "226"], 1], ["What is the normal human body temperature?", ["35\u00b0C", "36\u00b0C", "37\u00b0C", "39\u00b0C"], 2], ["How many grams are there in one kilogram?", ["100", "500", "1000", "10000"], 2], ["How many metres are there in one kilometre?", ["100", "500", "1000", "10000"], 2], ["What is the square root of 144?", ["11", "12", "13", "14"], 1], ["What is 15 multiplied by 8?", ["110", "115", "120", "125"], 2], ["Which is the first Surah of the Holy Quran?", ["Al-Baqarah", "Al-Fatiha", "Al-Ikhlas", "An-Nas"], 1], ["Which is the last Surah of the Holy Quran?", ["Al-Falaq", "Al-Ikhlas", "An-Nas", "Al-Kausar"], 2], ["In which month do Muslims fast?", ["Shawwal", "Muharram", "Ramadan", "Zil Hajj"], 2], ["How many Pillars of Islam are there?", ["Four", "Five", "Six", "Seven"], 1], ["Who was the first Prophet?", ["Noah (AS)", "Adam (AS)", "Ibrahim (AS)", "Musa (AS)"], 1], ["On which date is Pakistan Day celebrated?", ["14 August", "23 March", "25 December", "6 September"], 1], ["On which date is Defence Day celebrated in Pakistan?", ["23 March", "14 August", "6 September", "25 December"], 2], ["What is Pakistan's national fruit?", ["Banana", "Orange", "Mango", "Apple"], 2], ["Which city is known as the City of Gardens in Pakistan?", ["Karachi", "Lahore", "Islamabad", "Multan"], 1], ["Which city is known as the City of Lights in Pakistan?", ["Lahore", "Karachi", "Islamabad", "Faisalabad"], 1], ["Which is Pakistan's main seaport city?", ["Gwadar", "Karachi", "Pasni", "Ormara"], 1], ["In which province is Gwadar port located?", ["Sindh", "Punjab", "Balochistan", "Khyber Pakhtunkhwa"], 2], ["K2 is the world's ___ highest mountain.", ["Highest", "Second highest", "Third highest", "Fourth highest"], 1], ["Which river flows into the Arabian Sea?", ["Ravi River", "Indus River", "Chenab River", "Beas River"], 1], ["With how many countries does Pakistan share a land border?", ["Two", "Three", "Four", "Five"], 2], ["Who was the first woman Prime Minister of Pakistan?", ["Fatima Jinnah", "Benazir Bhutto", "Maryam Nawaz", "Hina Rabbani Khar"], 1], ["In which year did Malala Yousafzai win the Nobel Peace Prize?", ["2012", "2013", "2014", "2015"], 2], ["Dr. Abdus Salam won the Nobel Prize in which subject?", ["Chemistry", "Physics", "Medicine", "Peace"], 1], ["In which year did Pakistan become a nuclear power?", ["1971", "1974", "1998", "2001"], 2], ["In which year was the Lahore Resolution passed?", ["1935", "1940", "1947", "1956"], 1], ["On which date was Quaid-e-Azam Muhammad Ali Jinnah born?", ["23 March 1876", "14 August 1876", "25 December 1876", "9 November 1877"], 2], ["Iqbal Day is celebrated on which date?", ["9 November", "23 March", "14 August", "25 December"], 0], ["Who was the first man to walk on the Moon?", ["Buzz Aldrin", "Neil Armstrong", "Yuri Gagarin", "Michael Collins"], 1], ["In which year did the first human land on the Moon?", ["1959", "1965", "1969", "1975"], 2], ["Who invented the telephone?", ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Guglielmo Marconi"], 1], ["Who invented the electric light bulb?", ["Thomas Edison", "Albert Einstein", "Isaac Newton", "James Watt"], 0], ["Who proposed the theory of relativity?", ["Isaac Newton", "Albert Einstein", "Stephen Hawking", "Galileo Galilei"], 1], ["How many colours are there in a rainbow?", ["Five", "Six", "Seven", "Eight"], 2], ["At what temperature does water freeze?", ["0\u00b0C", "5\u00b0C", "10\u00b0C", "-5\u00b0C"], 0], ["Which is the largest organ of the human body?", ["Liver", "Heart", "Skin", "Brain"], 2], ["How many chambers does the human heart have?", ["Two", "Three", "Four", "Five"], 2], ["Which vitamin does sunlight help the body produce?", ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"], 3], ["What is the currency of Japan?", ["Won", "Yuan", "Yen", "Ringgit"], 2], ["What is the currency of the United Kingdom?", ["Euro", "Dollar", "Pound sterling", "Franc"], 2], ["Which language is spoken in Brazil?", ["Spanish", "Portuguese", "French", "Italian"], 1], ["How many letters are there in the English alphabet?", ["24", "25", "26", "27"], 2], ["Which country is home to kangaroos?", ["South Africa", "Australia", "India", "Brazil"], 1], ["In which country is the Burj Khalifa, the tallest building in the world?", ["Saudi Arabia", "Qatar", "United Arab Emirates", "Kuwait"], 2], ["In which city is the Eiffel Tower located?", ["London", "Rome", "Paris", "Berlin"], 2], ["In which country is the Taj Mahal located?", ["Pakistan", "Bangladesh", "Nepal", "India"], 3], ["The Pyramids of Giza are located in which country?", ["Sudan", "Egypt", "Iraq", "Mexico"], 1], ["Which is the largest mosque in the world?", ["Faisal Mosque", "Masjid al-Haram", "Blue Mosque", "Sheikh Zayed Mosque"], 1], ["Which gas do humans need to breathe to live?", ["Carbon dioxide", "Oxygen", "Nitrogen", "Helium"], 1], ["How many minutes are there in one hour?", ["30", "45", "60", "90"], 2], ["What is the freezing point of water in Fahrenheit?", ["0\u00b0F", "32\u00b0F", "50\u00b0F", "100\u00b0F"], 1], ["Which desert is located in Sindh province?", ["Thar Desert", "Cholistan Desert", "Kharan Desert", "Sahara Desert"], 0], ["Which Pakistani city is famous for its mangoes?", ["Multan", "Peshawar", "Quetta", "Sialkot"], 0]];
+function showDaily(){
+  const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Karachi',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const get=t=>parts.find(p=>p.type===t).value;
+  const y=+get('year'),m=+get('month'),d=+get('day');
+  const daysSinceEpoch=Math.floor(Date.UTC(y,m-1,d)/86400000);
+  const start=(daysSinceEpoch*5)%DAILY.length;
+  const fmt=new Date(Date.UTC(y,m-1,d)).toLocaleDateString('en-GB',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'});
+  document.getElementById('daily-date').textContent="Today's 5 Quiz Answers — "+fmt;
+  const box=document.getElementById('daily-list');box.innerHTML='';
+  for(let k=0;k<5;k++){
+    const q=DAILY[(start+k)%DAILY.length];
+    const wrap=document.createElement('div');wrap.className='daily-q';
+    const h=document.createElement('h3');h.textContent='Q'+(k+1)+': '+q[0];wrap.appendChild(h);
+    q[1].forEach((o,i)=>{const dd=document.createElement('div');dd.className='opt'+(i===q[2]?' correct':'');dd.textContent=(i===q[2]?'✓ Answer: ':'')+o;wrap.appendChild(dd);});
+    box.appendChild(wrap);
+  }
+  document.getElementById('daily-note').textContent='Questions '+(start+1)+' to '+((start+4)%DAILY.length+1)+' of '+DAILY.length+' in the rotation. The 5 questions change automatically every day at midnight Pakistan time.';
+}
+document.addEventListener('DOMContentLoaded',showDaily);
+
+const QUIZ=[["What is the capital of Pakistan?", ["Karachi", "Lahore", "Islamabad", "Peshawar"], 2], ["Which is the largest province of Pakistan by area?", ["Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan"], 3], ["What is the national language of Pakistan?", ["Punjabi", "Urdu", "Pashto", "Sindhi"], 1], ["What is the currency of Pakistan?", ["Taka", "Rupee", "Dinar", "Riyal"], 1], ["How many provinces does Pakistan have?", ["Three", "Four", "Five", "Six"], 1], ["What is the national animal of Pakistan?", ["Lion", "Markhor", "Snow leopard", "Tiger"], 1], ["Which is the longest river in Pakistan?", ["Ravi", "Chenab", "Jhelum", "Indus"], 3], ["What is the national flower of Pakistan?", ["Rose", "Jasmine", "Sunflower", "Tulip"], 1], ["On which date is Pakistan Independence Day celebrated?", ["23 March", "14 August", "25 December", "6 September"], 1], ["Which is the highest mountain in Pakistan?", ["Nanga Parbat", "K2", "Broad Peak", "Rakaposhi"], 1]];
+let qi=0,score=0;
+function renderQ(){
+  const q=QUIZ[qi];
+  document.getElementById('qnum').textContent='Question '+(qi+1)+' of '+QUIZ.length;
+  document.getElementById('qtext').textContent=q[0];
+  document.getElementById('qscore').textContent='Score: '+score;
+  const box=document.getElementById('qopts');box.innerHTML='';
+  q[1].forEach((o,i)=>{
+    const b=document.createElement('button');b.className='opt';b.textContent=o;
+    b.onclick=()=>{const btns=box.querySelectorAll('.opt');btns.forEach(x=>x.disabled=true);
+      if(i===q[2]){b.classList.add('correct');score++;document.getElementById('qfeed').textContent='Correct! Well done.';}
+      else{b.classList.add('wrong');btns[q[2]].classList.add('correct');document.getElementById('qfeed').textContent='Not quite — the correct answer is: '+q[1][q[2]];}
+      document.getElementById('qscore').textContent='Score: '+score;
+      document.getElementById('qnext').style.display='inline-block';};
+    box.appendChild(b);});
+  document.getElementById('qfeed').textContent='';document.getElementById('qnext').style.display='none';
+}
+function nextQ(){qi++;if(qi<QUIZ.length){renderQ();}else{
+  document.getElementById('quiz-body').innerHTML='<div class="result"><h3>Your score: '+score+' / '+QUIZ.length+'</h3><p>'+(score===10?'Perfect score! You are quiz-ready.':score>=7?'Great job — a little practice and you will be at the top.':score>=4?'Good start — try again and beat your score.':'Keep practising — play again and your score will climb.')+'</p><p>Want the real daily quiz? Open the My Zong app and play there for official rewards.</p><button class="btn" onclick="location.reload()">Play again</button></div>';}}
+document.addEventListener('DOMContentLoaded',renderQ);
+
+const CODES=[["*222#", "Check balance", "Dial *222# to check your remaining Zong balance. A small service fee may apply; confirm in the My Zong app."], ["*8#", "Check your own Zong number", "Dial *8# to see your own Zong mobile number on screen."], ["*102#", "Check remaining internet / data", "Dial *102# to check how much mobile data you have left in your active bundle."], ["*6464#", "Check active package details", "Dial *6464# to view details of the package or bundle currently active on your number."], ["310", "Zong helpline", "Call 310 from your Zong number to reach Zong customer support for help with your account, packages or the quiz."], ["*224#", "Check remaining free minutes", "Dial *224# to check your remaining free minutes balance on eligible bundles."]];
+function renderCodes(f){
+  const box=document.getElementById('code-list');box.innerHTML='';
+  const q=(f||'').toLowerCase();
+  const list=CODES.filter(c=>(c[0]+' '+c[1]+' '+c[2]).toLowerCase().includes(q));
+  if(!list.length){box.innerHTML='<p>No code matches that search. Try "balance", "data" or "number".</p>';return;}
+  list.forEach(c=>{const d=document.createElement('div');d.className='code-row';
+    d.innerHTML='<b>'+c[1]+'</b> — <code>'+c[0]+'</code><br><span>'+c[2]+'</span>';box.appendChild(d);});
+}
+document.addEventListener('DOMContentLoaded',()=>renderCodes(''));
+
+
+function calcData(){
+  const mb=parseFloat(document.getElementById('mb').value);
+  const out=document.getElementById('data-out');
+  if(isNaN(mb)||mb<=0){out.innerHTML='<p>Please enter a number of MB greater than 0.</p>';return;}
+  const gb=mb/1024;
+  const video=(gb/0.7).toFixed(1), browse=(gb/0.06).toFixed(1), music=(gb/0.05).toFixed(1);
+  out.innerHTML='<div class="result"><p><strong>'+mb+' MB = '+gb.toFixed(2)+' GB</strong></p><p>Estimated use: about <strong>'+video+' hours</strong> of standard video, <strong>'+browse+' hours</strong> of web browsing, or <strong>'+music+' hours</strong> of music streaming.</p><p style="font-size:13px;color:#6b7280">Estimates only — video quality, app and network change real usage.</p></div>';
+}
+
+const PKGS=[["Daily Mini", 1, 100, "1 day", "Small daily bundle for light use."], ["Weekly Super Card", 5, 500, "7 days", "Weekly bundle with data and minutes for regular users."], ["Student Lite", 6, 300, "30 days", "Monthly bundle suited to students and light users."], ["Monthly Basic", 8, 1000, "30 days", "Monthly bundle for everyday browsing, calls and social apps."], ["Monthly Pro", 15, 1500, "30 days", "Monthly bundle for heavy browsing and video streaming."], ["Monthly Max", 30, 3000, "30 days", "Large monthly bundle for heavy data users and families."]];
+function findPkg(){
+  const data=parseFloat(document.getElementById('need-data').value)||0;
+  const mins=parseInt(document.getElementById('need-mins').value)||0;
+  const out=document.getElementById('pkg-out');
+  const match=PKGS.find(p=>p[1]>=data&&p[2]>=mins);
+  if(match){out.innerHTML='<div class="result"><h3>Recommended: '+match[0]+'</h3><p>'+match[1]+' GB data, '+match[2]+' minutes, valid '+match[3]+'.</p><p>'+match[4]+'</p><p style="font-size:13px;color:#6b7280">Confirm the current price in the My Zong app, as offers change.</p></div>';}
+  else{out.innerHTML='<div class="result"><h3>No single bundle in our list covers that much use.</h3><p>Try the Monthly Max bundle, or combine a data bundle with a call bundle. Check the My Zong app for the latest large bundles and current prices.</p></div>';}
+}
+
+
+function checkExpiry(){
+  const d=document.getElementById('act-date').value;
+  const days=parseInt(document.getElementById('valid-days').value);
+  const out=document.getElementById('exp-out');
+  if(!d||isNaN(days)||days<=0){out.innerHTML='<p>Please pick an activation date and enter validity in days.</p>';return;}
+  const act=new Date(d+'T00:00:00');const exp=new Date(act);exp.setDate(exp.getDate()+days);
+  const fmt=x=>x.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  out.innerHTML='<div class="result"><p>Activated: <strong>'+fmt(act)+'</strong></p><p>Validity: <strong>'+days+' days</strong></p><p>Expiry date: <strong>'+fmt(exp)+'</strong></p><p style="font-size:13px;color:#6b7280">Your package usually stops working at the end of the expiry date. Confirm the exact expiry in the My Zong app.</p></div>';
+}
+
+</script>
+
+</div>
+<footer><div class="foot-in">
+<nav><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy Policy</a><a href="/disclaimer.html">Disclaimer</a></nav>
+<p><strong>Zong Quiz Today</strong> — daily quiz answers, mobile codes and guides for Zong users in Pakistan.</p>
+<p>Unofficial &amp; independent — not affiliated with Zong, Zong CMPak Ltd, or any telecom company. Codes, prices, packages and rewards change often; always confirm the current details in the official My Zong app or by calling the Zong helpline 310.</p>
+<p>&copy; 2026 Zong Quiz Today. All rights reserved.</p>
+</div></footer>
+</body>
+</html>
